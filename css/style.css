@@ -3755,3 +3755,14 @@ input:not(:focus):valid~.floating-label {
 .new-acco #collapse-F {
     display: block !important;
 }
+
+/* Universal Table Responsiveness Fix */
+@media screen and (max-width: 767px) {
+    table {
+        display: block !important;
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+}
+
