@@ -21,7 +21,7 @@ html {
 }
 
 body {
-	color: #223a72;
+	color: #142450;
 	line-height: 1.5;
 	font-weight: 400;
 	font-size: 14px;
@@ -87,7 +87,7 @@ button {
 }
 
 .innerbannersmall {
-	background: #253a71 !important;
+	background: #142450 !important;
 }
 
 .innerbannersmall .content h1 {
@@ -95,7 +95,7 @@ button {
 }
 
 .blogs .fcyellow {
-	color: #223a72;
+	color: #142450;
 }
 
 .bg-blue span img {
@@ -112,7 +112,7 @@ button {
 	margin: -5px 2px 0;
 	-webkit-animation-delay: 1.2s;
 	animation-delay: 1.2s;
-	background: linear-gradient(to right, #223a72, #223a72);
+	background: linear-gradient(to right, #142450, #142450);
 	background-repeat: no-repeat;
 	background-size: 0 100%;
 	transition: background-size 1s
@@ -162,7 +162,7 @@ span.isvalid::after {
 }
 
 .pasright {
-	background: url(../img/bg-arrows.png) center/cover no-repeat;
+	background: url(/img/bg-arrows.png) center/cover no-repeat;
 	padding-top: 45px;
 	padding-left: 50px;
 	padding-right: 40px
@@ -184,11 +184,11 @@ span.isvalid::after {
 
 .paspoints p {
 	display: inline;
-	color: #223a72
+	color: #142450
 }
 
 .bg-blue {
-	background-color: #2961AD;
+	background-color: #142450;
 }
 
 .color-white {
@@ -272,7 +272,7 @@ span.isvalid::after {
 }
 
 .loanthumbh p {
-	color: #223a72;
+	color: #142450;
 	line-height: 18px;
 	padding-top: 8px;
 	font-size: 15px
@@ -281,7 +281,7 @@ span.isvalid::after {
 .loanthumbh a.banner-apply-now {
 	padding: 5px 10px;
 	background-color: #fff;
-	color: #223a72;
+	color: #142450;
 	font-size: 13px;
 	position: absolute;
 	left: 0;
@@ -291,10 +291,10 @@ span.isvalid::after {
 }
 
 .loanthumbh a.banner-apply-now span {
-	color: #233972;
+	color: #142450;
 	padding: 5px 16px 5px 16px;
 	border-radius: 12px;
-	background-color: #223a72;
+	background-color: #142450;
 	color: #fff
 }
 
@@ -309,7 +309,7 @@ span.isvalid::after {
 .loanthumbh a.banner-know-more {
 	background-color: #fff;
 	padding: 10px;
-	color: #223a72;
+	color: #142450;
 	font-size: 13px;
 	position: absolute;
 	left: 0;
@@ -440,7 +440,7 @@ span.isvalid::after {
 }
 
 .parain {
-	background: url(../img/bg-arrows.png) center/cover no-repeat;
+	background: url(/img/bg-arrows.png) center/cover no-repeat;
 	padding-top: 40px
 }
 
@@ -505,7 +505,7 @@ i.fa.fa-chevron-right {
 }
 
 .blogs .shadow:hover .mediatext h5 {
-	color: #223a72
+	color: #142450
 }
 
 .mediatext p {
@@ -534,7 +534,7 @@ h2.fcblue {
 }
 
 .fcblue {
-	color: #223a72
+	color: #142450
 }
 
 .fcyellow {
@@ -550,7 +550,7 @@ h2.fcblue {
 }
 
 .bg-img {
-	background-image: url(../img/banner.jpg);
+	background-image: url(/img/banner.jpg);
 	background-size: cover;
 	background-repeat: no-repeat
 }
@@ -669,7 +669,7 @@ nav.navbar.bgopac.navbar-expand-lg.nav-scroll {
 .tab-menu>li>a.active:after {
 	content: "\f078";
 	font-family: FontAwesome;
-	color: #223a72;
+	color: #142450;
 	border: none;
 	vertical-align: 0;
 	position: absolute;
@@ -701,7 +701,7 @@ nav.navbar.bgopac.navbar-expand-lg.nav-scroll {
 
 .nav-scroll {
 	background: #fff;
-	border-bottom: 1px solid #223a72;
+	border-bottom: 1px solid #142450;
 	position: fixed;
 	top: -100px;
 	left: 0;
@@ -753,7 +753,7 @@ nav.navbar.bgopac.navbar-expand-lg.nav-scroll {
 }
 
 .header .caption h1 b {
-	color: #223a72;
+	color: #142450;
 	font-weight: 700
 }
 
@@ -784,7 +784,7 @@ nav.navbar.bgopac.navbar-expand-lg.nav-scroll {
 
 .srch-bar-1 {
 	padding: 8px 14px;
-	border: 1px solid #223a72;
+	border: 1px solid #142450;
 	border-radius: 50px;
 	width: 144px;
 	position: relative;
@@ -793,23 +793,23 @@ nav.navbar.bgopac.navbar-expand-lg.nav-scroll {
 }
 
 .srch-bar-1::-webkit-input-placeholder {
-	color: #223a72
+	color: #142450
 }
 
 .srch-bar-1::-moz-placeholder {
-	color: #223a72
+	color: #142450
 }
 
 .srch-bar-1:-ms-input-placeholder {
-	color: #223a72
+	color: #142450
 }
 
 .srch-bar-1:-moz-placeholder {
-	color: #223a72
+	color: #142450
 }
 
 .srch-bar-1-btn {
-	color: #223a72;
+	color: #142450;
 	border: none;
 	background: 0 0;
 	right: 14px;
@@ -905,7 +905,7 @@ nav.navbar.bgopac.navbar-expand-lg.nav-scroll {
 
 .callback a {
 	height: 30px;
-	background-color: #223a72;
+	background-color: #142450;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	color: #fff;
@@ -1040,7 +1040,7 @@ footer p {
 
 .blue-btn-bg,
 .yellow-btn-bg {
-	background-color: #223a72 !important;
+	background-color: #142450 !important;
 }
 
 .breadcrumb {
@@ -1071,7 +1071,7 @@ footer p {
 .steps .container:after {
 	width: 70%;
 	height: 3px;
-	background-color: #223a72;
+	background-color: #142450;
 	display: inline-block;
 	position: absolute;
 	top: 48%;
@@ -1084,7 +1084,7 @@ footer p {
 	content: "";
 	width: 70%;
 	height: 3px;
-	background-color: #223a72;
+	background-color: #142450;
 	display: inline-block;
 	position: absolute;
 	top: 52%;
@@ -1136,7 +1136,7 @@ footer p {
 }
 
 .step2 {
-	border: 10px solid #223a72
+	border: 10px solid #142450
 }
 
 .step:hover {
@@ -1145,7 +1145,7 @@ footer p {
 }
 
 .step2:hover {
-	background-color: #223a72;
+	background-color: #142450;
 	color: #fff
 }
 
@@ -1187,8 +1187,8 @@ footer p {
 
 .step2 .dot:after,
 .step2 .dot:before {
-	background-color: #223a72;
-	box-shadow: 0 0 0 3px #223a72
+	background-color: #142450;
+	box-shadow: 0 0 0 3px #142450
 }
 
 .cols:first-child .step .dot:before,
@@ -1199,7 +1199,7 @@ footer p {
 .cols p {
 	text-align: center;
 	margin: 20px 0;
-	color: #223a72
+	color: #142450
 }
 
 .pltype .img-hover-zoom {
@@ -1219,11 +1219,11 @@ footer p {
 
 .pltype .icardtext h4,
 .pltype .icardtext p {
-	color: #223a72
+	color: #142450
 }
 
 .pltype .icardtext i {
-	color: #223a72
+	color: #142450
 }
 
 .pltype .icardtext p {
@@ -1265,13 +1265,13 @@ footer p {
 .lbranch {
 	width: 100%;
 	height: 100%;
-	background: url(../img/lbranch-bg.png) no-repeat #fff;
+	background: url(/img/lbranch-bg.png) no-repeat #fff;
 	padding: 20px;
 	display: inline-block
 }
 
 .lbranch h4 {
-	color: #223a72;
+	color: #142450;
 	font-size: 20px;
 	margin-bottom: 20px
 }
@@ -1304,7 +1304,7 @@ footer p {
 	margin: 0;
 	padding: 0 0 8px 20px;
 	list-style: none;
-	color: #223a72
+	color: #142450
 }
 
 .lbranch ul li a {
@@ -1317,7 +1317,7 @@ footer p {
 	content: "";
 	width: 7px;
 	height: 7px;
-	background-color: #223a72;
+	background-color: #142450;
 	border-radius: 50px;
 	display: inline-block;
 	position: absolute;
@@ -1327,7 +1327,7 @@ footer p {
 
 .blogs i {
 	font-size: 22px;
-	color: #223a72
+	color: #142450
 }
 
 .blogs i:hover {
@@ -1350,7 +1350,7 @@ footer p {
 }
 
 .faqbox .emitab .nav-link {
-	border: 1px solid #223a72 !important;
+	border: 1px solid #142450 !important;
 	border-radius: 5px !important
 }
 
@@ -1381,12 +1381,12 @@ i.fa.fa-rupee {
 	border-bottom: 1px dashed #e6b120;
 	padding: 10px;
 	cursor: pointer;
-	color: #223a72
+	color: #142450
 }
 
 .accordion .card,
 .card-body p {
-	color: #223a72;
+	color: #142450;
 	margin-bottom: 0
 }
 
@@ -1401,7 +1401,7 @@ i.fa.fa-rupee {
 
 .tab-content td {
 	vertical-align: middle;
-	color: #223a72;
+	color: #142450;
 	border: none;
 	font-size: 16px;
 	line-height: 20px
@@ -1410,7 +1410,7 @@ i.fa.fa-rupee {
 .tab-content th {
 	border-top: 0 solid #e6b120;
 	font-size: 22px;
-	color: #223a72
+	color: #142450
 }
 
 .tab-content .table-striped tbody tr:nth-of-type(odd) {
@@ -1433,7 +1433,7 @@ i.fa.fa-rupee {
 
 .emichart {
 	width: 100%;
-	border-right: 2px dashed #223a72;
+	border-right: 2px dashed #142450;
 	margin: 20px 0;
 	display: inline-block
 }
@@ -1443,7 +1443,7 @@ i.fa.fa-rupee {
 	padding: 10px 30px;
 	font-size: 20px;
 	font-weight: 700;
-	color: #223a72;
+	color: #142450;
 	margin: 20px 0;
 	display: inline-block
 }
@@ -1475,7 +1475,7 @@ i.fa.fa-rupee {
 
 .circle-wrap .circle .mask .fill {
 	clip: rect(0, 77px, 319px, 0);
-	background-color: #223a72
+	background-color: #142450
 }
 
 .circle-wrap .circle .fill,
@@ -1530,7 +1530,7 @@ i.fa.fa-rupee {
 	content: "";
 	width: 10px;
 	height: 10px;
-	background-color: #223a72;
+	background-color: #142450;
 	margin-right: 10px;
 	display: inline-block
 }
@@ -1590,7 +1590,7 @@ i.fa.fa-rupee {
 .dropdown-toggle::after {
 	content: "\f078";
 	font-family: FontAwesome;
-	color: #223a72;
+	color: #142450;
 	border: none;
 	vertical-align: 0
 }
@@ -1655,7 +1655,7 @@ i.fa.fa-rupee {
 	padding: 10px;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
-	background-color: #223a72;
+	background-color: #142450;
 	min-width: 160px;
 	text-align: center;
 	border: 1px solid #FFF
@@ -1804,7 +1804,7 @@ input:not(:focus):valid~.floating-label {
 
 .overviewbullet ul li::before {
 	content: "";
-	border-color: transparent #223a72;
+	border-color: transparent #142450;
 	border-style: solid;
 	border-width: .35em 0 .35em .45em;
 	display: block;
@@ -1819,7 +1819,7 @@ input:not(:focus):valid~.floating-label {
 	margin: 0;
 	padding: 0 0 10px 20px;
 	list-style: none;
-	color: #223a72;
+	color: #142450;
 	position: relative;
 	font-weight: 400;
 }
@@ -1869,8 +1869,8 @@ input:not(:focus):valid~.floating-label {
 
 .tab-scroll-fixed {
 	background: #fff;
-	border-bottom: 1px solid #223a72;
-	border-top: 1px solid #223a72;
+	border-bottom: 1px solid #142450;
+	border-top: 1px solid #142450;
 	position: fixed;
 	top: 109px;
 	left: 0;
@@ -1919,7 +1919,7 @@ input:not(:focus):valid~.floating-label {
 	margin-top: -10px;
 	width: 15px;
 	height: 15px;
-	border: 1px solid #233972;
+	border: 1px solid #142450;
 	border-radius: 50%;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -1934,7 +1934,7 @@ input:not(:focus):valid~.floating-label {
 	border-radius: 50%;
 	width: 9px;
 	height: 9px;
-	background: #233972;
+	background: #142450;
 	left: 2px;
 	top: 2px;
 	-webkit-transform: scale(0, 0);
@@ -2010,7 +2010,7 @@ input:not(:focus):valid~.floating-label {
 
 .blue-btn:hover::before {
 	opacity: 1;
-	background-color: #223a72
+	background-color: #142450
 }
 
 .blue-btn:after {
@@ -2048,7 +2048,7 @@ input:not(:focus):valid~.floating-label {
 	z-index: 4;
 	-webkit-animation-delay: 1.2s;
 	animation-delay: 1.2s;
-	background: linear-gradient(to right, #223a72, #223a72);
+	background: linear-gradient(to right, #142450, #142450);
 	background-repeat: no-repeat;
 	background-size: 0 100%;
 	transition: background-size 1s
@@ -2105,7 +2105,7 @@ input:not(:focus):valid~.floating-label {
 	z-index: 4;
 	-webkit-animation-delay: 1.2s;
 	animation-delay: 1.2s;
-	background: linear-gradient(to right, #223a72, #223a72);
+	background: linear-gradient(to right, #142450, #142450);
 	background-repeat: no-repeat;
 	background-size: 0 100%;
 	transition: background-size 1s
@@ -2121,7 +2121,7 @@ input:not(:focus):valid~.floating-label {
 
 .title {
 	font-size: 32px !important;
-	color: #223a72;
+	color: #142450;
 	position: relative;
 	text-decoration: none !important;
 	margin-bottom: 20px;
@@ -2134,13 +2134,13 @@ input:not(:focus):valid~.floating-label {
 }
 
 .title span {
-	color: #223a72
+	color: #142450
 }
 
 .know-more-link a {
 	font-weight: 700;
 	font-size: 20px;
-	color: #223a72;
+	color: #142450;
 	padding-top: 25px;
 	transition: 0.5s
 }
@@ -2172,7 +2172,7 @@ input:not(:focus):valid~.floating-label {
 
 .reviews .item {
 	padding: 60px 40px 30px;
-	border: 1px solid #223a72;
+	border: 1px solid #142450;
 	-webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
 	-moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
@@ -2190,7 +2190,7 @@ input:not(:focus):valid~.floating-label {
 }
 
 .reviews .item h3 {
-	color: #223a72;
+	color: #142450;
 	font-size: 20px;
 	margin-top: 5px;
 	margin-bottom: 15px;
@@ -2205,24 +2205,24 @@ input:not(:focus):valid~.floating-label {
 }
 
 .reviews .item .before-arrow {
-	background: url(../img/before-arrow.png) center/100% no-repeat;
+	background: url(/img/before-arrow.png) center/100% no-repeat;
 	top: 30px
 }
 
 .reviews .item .after-arrow {
-	background: url(../img/after-arrow.png) center/100% no-repeat;
+	background: url(/img/after-arrow.png) center/100% no-repeat;
 	bottom: 30px;
 	right: 50px
 }
 
 .reviews .item.yellow-box .before-arrow,
 .reviews .owl-item.yellow-box .item .before-arrow {
-	background: url(../img/before-arrow-gold.png) center/100% no-repeat
+	background: url(/img/before-arrow-gold.png) center/100% no-repeat
 }
 
 .reviews .item.yellow-box .after-arrow,
 .reviews .owl-item.yellow-box .item .after-arrow {
-	background: url(../img/after-arrow-gold.png) center/100% no-repeat
+	background: url(/img/after-arrow-gold.png) center/100% no-repeat
 }
 
 .newsmedia {
@@ -2239,7 +2239,7 @@ input:not(:focus):valid~.floating-label {
 }
 
 .list li {
-	color: #223a72;
+	color: #142450;
 	padding-left: 15px;
 	padding-bottom: 5px;
 	position: relative
@@ -2252,7 +2252,7 @@ input:not(:focus):valid~.floating-label {
 
 .list li:before {
 	content: "";
-	border-color: transparent #253a71;
+	border-color: transparent #142450;
 	border-style: solid;
 	border-width: .35em 0 .35em .45em;
 	display: block;
@@ -2280,7 +2280,7 @@ input:not(:focus):valid~.floating-label {
 .card-body h3,
 .card-body h5 {
 	font-size: 17px;
-	color: #223a72;
+	color: #142450;
 	margin-top: 25px
 }
 
@@ -2291,8 +2291,8 @@ input:not(:focus):valid~.floating-label {
 .accordion-item {
 	background-color: transparent;
 	cursor: pointer;
-	color: #223a72;
-	border-bottom: 1px dashed #223a72
+	color: #142450;
+	border-bottom: 1px dashed #142450
 }
 
 .accordion-header {
@@ -2322,7 +2322,7 @@ input:not(:focus):valid~.floating-label {
 	content: "";
 	width: 11px;
 	height: 3px;
-	background: #223a72;
+	background: #142450;
 	position: absolute;
 	top: 22px;
 	right: 18px
@@ -2332,7 +2332,7 @@ input:not(:focus):valid~.floating-label {
 	content: "";
 	width: 3px;
 	height: 11px;
-	background: #2961AD;
+	background: #142450;
 	position: absolute;
 	top: 18px;
 	right: 22px
@@ -2376,60 +2376,85 @@ input:not(:focus):valid~.floating-label {
 
 .inner_banner {
 	position: relative;
-	margin-top: 0;
 	min-height: 220px;
-	background: linear-gradient(135deg, #142450 0%, #253a72 100%)
+	background: linear-gradient(135deg, #142450 0%, #1b2f66 50%, #253a72 100%);
+	color: #ffffff;
+	padding: 30px 0 15px 0;
+	overflow: hidden;
+}
+
+.inner_banner .container {
+	position: relative;
+	z-index: 10;
 }
 
 .inner_banner .inner_text {
-	position: absolute;
-	top: 50%;
-	width: 50%;
-	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	text-align: left
-}
-
-.inner_banner .inner_text h4 {
-	font-size: 40px;
-	font-weight: 400;
-	line-height: 1.2
-}
-
-.inner_banner .inner_text h4 span {
-	display: block;
-	font-weight: 700
+	position: relative;
+	top: auto;
+	transform: none;
+	width: 100%;
+	max-width: 750px;
+	text-align: left;
+	z-index: 10;
+	padding: 10px 0;
 }
 
 .inner_banner .inner_text h1 {
-	font-size: 40px;
-	font-weight: 400;
-	line-height: 1.2
+	font-size: 34px;
+	font-weight: 700;
+	color: #ffffff;
+	line-height: 1.25;
+	margin-bottom: 8px;
 }
 
-.inner_banner .inner_text h1 span {
-	display: block;
-	font-weight: 700
+.inner_banner .inner_text h1 span,
+.inner_banner .inner_text span {
+	color: #f87171;
+	font-weight: 700;
+	display: inline-block;
 }
 
 .inner_banner .inner_text p {
-	font-size: 18px;
-	padding-top: 5px;
-	line-height: 1.2;
-	color: #ffffff
+	font-size: 16px;
+	line-height: 1.5;
+	color: #e2e8f0;
+	margin-top: 6px;
 }
 
-.inner_banner .inner_text p i {
-	font-size: 17px;
-	padding-right: 1px
+.inner_banner figure {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	opacity: 0.12;
+	pointer-events: none;
+}
+
+.inner_banner figure img {
+	height: 100%;
+	object-fit: cover;
+}
+
+.inner_banner .breadcrumbdiv {
+	margin-top: 12px;
+	position: relative;
+	z-index: 10;
+}
+
+.inner_banner .breadcrumb {
+	background: transparent;
+	padding: 0;
+	margin: 0;
 }
 
 .inner_banner .breadcrumb a,
 .inner_banner .breadcrumb li {
-	font-size: 13px
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.inner_banner .breadcrumb li.active {
+	color: #f87171 !important;
 }
 
 .blogaudio audio {
@@ -2446,7 +2471,7 @@ input:not(:focus):valid~.floating-label {
 	position: absolute;
 	right: 0;
 	top: 90%;
-	background-color: #223a72;
+	background-color: #142450;
 	padding: 6px 8px;
 	margin-bottom: 0;
 	border-radius: 6px;
@@ -2624,7 +2649,7 @@ input:not(:focus):valid~.floating-label {
 	}
 
 	.step {
-		border: 5px solid #223a72;
+		border: 5px solid #142450;
 		padding: 5px;
 		font-size: 15px;
 		line-height: 14px
@@ -2704,7 +2729,7 @@ input:not(:focus):valid~.floating-label {
 	.hamburger span,
 	.hamburger span:after,
 	.hamburger span:before {
-		background: #223a72;
+		background: #142450;
 		width: 20px;
 		height: 3px
 	}
@@ -2775,7 +2800,7 @@ input:not(:focus):valid~.floating-label {
 	}
 
 	.inner_banner {
-		margin-top: 80px
+		margin-top: 0 !important
 	}
 
 	.inner_banner .inner_text h4 {
@@ -2887,7 +2912,7 @@ input:not(:focus):valid~.floating-label {
 	}
 
 	.bg-img {
-		background-image: url(../img/banner-mobile.jpg);
+		background-image: url(/img/banner-mobile.jpg);
 		margin-top: 65px
 	}
 
@@ -2981,7 +3006,7 @@ input:not(:focus):valid~.floating-label {
 		content: "";
 		width: 3px;
 		height: 70%;
-		background-color: #223a72;
+		background-color: #142450;
 		display: inline-block;
 		position: absolute;
 		top: 50%;
@@ -3007,7 +3032,7 @@ input:not(:focus):valid~.floating-label {
 
 	.emichart {
 		border-right: none;
-		border-bottom: 2px dashed #223a72;
+		border-bottom: 2px dashed #142450;
 		padding-bottom: 30px
 	}
 
@@ -3153,7 +3178,7 @@ input:not(:focus):valid~.floating-label {
 		position: unset !important;
 		margin: 0;
 		padding: 20px 15px;
-		background: #223a72
+		background: #142450
 	}
 
 	.ploan .row {
@@ -3378,7 +3403,7 @@ input:not(:focus):valid~.floating-label {
 
 	.step2,
 	.step4 {
-		border: 7px solid #223a72
+		border: 7px solid #142450
 	}
 
 	.step span {
@@ -3435,8 +3460,8 @@ input:not(:focus):valid~.floating-label {
 
 	.five-right-text h4 {
 		font-size: 16px;
-		border-bottom: 1px dashed #223a72;
-		color: #223a72;
+		border-bottom: 1px dashed #142450;
+		color: #142450;
 		padding-bottom: 10px
 	}
 
@@ -3461,7 +3486,7 @@ input:not(:focus):valid~.floating-label {
 	}
 
 	.inner_banner {
-		margin-top: 65px
+		margin-top: 0 !important
 	}
 
 	.inner_banner .inner_text {
@@ -3529,7 +3554,7 @@ input:not(:focus):valid~.floating-label {
 
 .blog-inner p a,
 .blog-inner ul li a {
-	color: #223a72;
+	color: #142450;
 	text-decoration: underline;
 	font-weight: 600
 }
@@ -3580,11 +3605,11 @@ input:not(:focus):valid~.floating-label {
 }
 
 .kkc-prod-cta .ybtn .txt {
-	color: #223a72;
+	color: #142450;
 }
 
 .kkc-prod-cta .ybtn:after {
-	background-color: #223a72;
+	background-color: #142450;
 }
 
 .kkc-prod-cta .ybtn.yellow-btn-bg:hover {
@@ -3631,7 +3656,7 @@ input:not(:focus):valid~.floating-label {
 }
 
 .hrow {
-	border-top: 1px solid #223a72;
+	border-top: 1px solid #142450;
 	margin: 14px 0px;
 }
 
@@ -3648,7 +3673,7 @@ input:not(:focus):valid~.floating-label {
 }
 
 .hor-row {
-	border-color: #223a72;
+	border-color: #142450;
 	margin-bottom: 24px;
 }
 
@@ -3658,7 +3683,7 @@ input:not(:focus):valid~.floating-label {
 
 .banner-btn-left {
 	color: #ffffff !important;
-	background-color: #223a72 !important;
+	background-color: #142450 !important;
 	padding: 10px 30px;
 	border-radius: 5px;
 }
@@ -3766,3 +3791,82 @@ input:not(:focus):valid~.floating-label {
     }
 }
 
+/* Modern, Premium Table Styling */
+.table-responsive {
+  border-radius: 16px !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+  overflow: hidden !important;
+  margin: 1.5rem 0 !important;
+  background-color: #ffffff !important;
+}
+
+table, .table {
+  width: 100% !important;
+  margin-bottom: 0 !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  font-size: 14px !important;
+  color: #1e293b !important;
+}
+
+table th, .table th, .tab-inner-content .th, .tab-inner-content .th.border-white {
+  background: linear-gradient(135deg, #142450 0%, #1b2f66 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  padding: 16px 24px !important;
+  border: none !important;
+  text-align: left !important;
+}
+
+table td, .table td, .tab-inner-content .table-striped td, .tab-content .table-border tbody tr td {
+  padding: 16px 24px !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: #334155 !important;
+  border-top: 1px solid #f1f5f9 !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  border-left: none !important;
+  border-right: none !important;
+  vertical-align: middle !important;
+  transition: background-color 0.15s ease !important;
+}
+
+table tbody tr:nth-of-type(odd), .table-striped tbody tr:nth-of-type(odd), .tab-inner-content .table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f8fafc !important;
+}
+
+table tbody tr:nth-of-type(even), .table-striped tbody tr:nth-of-type(even), .tab-inner-content .table-striped tbody tr:nth-of-type(even) {
+  background-color: #ffffff !important;
+}
+
+table tbody tr:hover, .table-striped tbody tr:hover {
+  background-color: #f1f5f9 !important;
+}
+
+table tbody tr td:first-child, .table-striped tbody tr td:first-child, .tab-inner-content .table-striped tbody tr td:nth-child(1) {
+  font-weight: 600 !important;
+  color: #0f172a !important;
+  width: 42% !important;
+}
+
+/* Ensure Footer and Contact Details match Front Page Primary Color (#142450) */
+footer, .footer, footer.bg-primary, .bg-primary {
+  background-color: #142450 !important;
+  color: #ffffff !important;
+}
+
+.text-primary {
+  color: #142450 !important;
+}
+
+.border-primary {
+  border-color: #142450 !important;
+}
+
+.blue-btn, .blue-btn-bg, #btn-submit-contact {
+  background-color: #142450 !important;
+}

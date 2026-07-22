@@ -6,9 +6,7 @@
     </linearGradient>
   </defs>
   <rect width="1200" height="400" fill="url(#bg)"/>
-  <text x="60" y="175" font-size="42" font-weight="bold" 
-        font-family="Arial,sans-serif" fill="#ffffff">Medical Equipment Loan</text>
-  <text x="60" y="230" font-size="20" 
-        font-family="Arial,sans-serif" fill="#b0bcd4">Up to ₹10 Crore | Quick approval</text>
+  
+  
   <rect x="60" y="255" width="80" height="4" rx="2" fill="#b61722"/>
 </svg>

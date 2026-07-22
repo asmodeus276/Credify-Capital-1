@@ -1,8 +1,5 @@
 <!DOCTYPE html><html lang="en"><head>
-<script src="js/jquery-3.6.0.min.js"></script>
-
-
-
+<script src="/js/jquery-3.6.0.min.js"></script>
 
       <!-- Metas -->
 
@@ -26,7 +23,7 @@
 
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-      <link rel="apple-touch-icon" type="image/png" href="img/favicon.ico">
+      <link rel="apple-touch-icon" type="image/png" href="/img/favicon.ico">
 
       <meta name="keywords" content="loan against property, mortgage loan, mortgage loan online">
 
@@ -38,61 +35,60 @@
 
       <!-- Favicon -->
 
-      <link rel="shortcut icon" href="img/favicon.ico">
+      <link rel="shortcut icon" href="/img/favicon.ico">
 
       <!-- Plugins -->
 
-      <link rel="stylesheet" href="css/plugins.css">
+      <link rel="stylesheet" href="/css/plugins.css">
 
       <!-- Core Style Css -->
 
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="/css/style.css">
 
-      <link rel="stylesheet" href="css/style-new.css">
+      <link rel="stylesheet" href="/css/style-new.css">
 
-      <link rel="stylesheet" href="css/style-pl.css">
+      <link rel="stylesheet" href="/css/style-pl.css">
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-      <link rel="stylesheet" href="css/new-acco.css">
+      <link rel="stylesheet" href="/css/new-acco.css">
 
-      <link rel="stylesheet" href="css/product-amount.css">
+      <link rel="stylesheet" href="/css/product-amount.css">
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script id="tailwind-config">try{
-  tailwind.config = {
-    corePlugins: { preflight: false },
-    theme: {
-      extend: {
-        colors: {
-          primary: '#142450',
-          secondary: '#b61722',
-          surface: '#f8f9ff',
-          'on-surface': '#0b1c30',
-          'on-surface-variant': '#45464f',
-          'primary-container': '#2b3a67',
-          'on-primary-container': '#96a5d9',
-          'outline-variant': '#c5c6d0'
-        },
-        fontFamily: {
-          'display-md': ['Inter'],
-          'label-md': ['Inter'],
-          'body-md': ['Inter'],
-          'headline-sm': ['Inter']
-        },
-        spacing: {
-          'margin-mobile': '16px',
-          'margin-desktop': '48px',
-          'gutter': '24px'
-        }
+<link rel="stylesheet" href="/css/tailwind-built.css">
+
+  <link rel="stylesheet" href="/css/loan-page-common.css">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/tailwind-built.css">
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var menuBtn = document.getElementById('mobile-menu-btn');
+  var menuPanel = document.getElementById('mobile-menu-panel');
+  var menuIcon = document.getElementById('mobile-menu-icon');
+  if (menuBtn && menuPanel) {
+    menuBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = !menuPanel.classList.contains('hidden');
+      menuPanel.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+      if (menuIcon) menuIcon.textContent = isOpen ? 'close' : 'menu';
+    });
+    document.addEventListener('click', function(e) {
+      if (!menuPanel.classList.contains('hidden') && !menuBtn.contains(e.target) && !menuPanel.contains(e.target)) {
+        menuPanel.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        if (menuIcon) menuIcon.textContent = 'menu';
       }
-    }
+    });
   }
-}catch(_e){}</script>
-  <link rel="stylesheet" href="css/loan-page-common.css">
+});
+</script>
+
 </head>
 
-   <body style="padding-top: 108px;">
+   <body class="bg-background text-on-background font-body-md pt-[64px] lg:pt-[116px]">
 
     <div class="bg-secondary text-white py-2 px-4 text-center text-xs font-bold tracking-wider uppercase flex items-center justify-center gap-2 shadow-sm">
       <span class="material-symbols-outlined text-sm">notification_important</span> Flexible Terms: Zero pre-closure charges for customized short-term property loans
@@ -104,17 +100,13 @@
   <div class="bg-white">
     <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop h-16 flex items-center justify-between">
       <!-- Logo -->
-      <a href="index.html" class="flex items-center gap-3 group">
-        <img src="logo-mark.png" alt="Credify Capital Logo" class="w-12 h-12 md:w-16 md:h-16 object-contain">
-        <span class="font-display-md text-display-md text-primary font-bold tracking-tight transition-colors group-hover:text-secondary">
-          Credify <span class="text-secondary group-hover:text-primary">Capital</span>
-        </span>
-      </a>
-
-      <!-- Desktop Utility Links -->
+      <a href="index.html" class="flex items-center group py-1.5">
+        <img src="/img/credify-full-logo.png" alt="Credify Capital Logo" class="h-14 md:h-18 lg:h-22 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-xs" />
+      </a><!-- Desktop Utility Links -->
       <div class="hidden lg:flex items-center gap-6 font-label-md text-label-md text-on-surface-variant">
         <a href="about.html" class="hover:text-primary transition-colors">About Us</a>
         <a href="partner-login.html" class="hover:text-primary transition-colors">Partner Login</a>
+        <a href="track-application.html" class="hover:text-primary transition-colors font-semibold text-secondary">Track Status</a>
         <a href="blogs.html" class="hover:text-primary transition-colors">Blogs</a>
         <a href="contact-us.html" class="hover:text-primary transition-colors">Contact Us</a>
         <a href="apply.html" class="bg-secondary text-white px-6 py-2 rounded-full font-bold hover:brightness-110 shadow-sm transition-all ml-2">
@@ -123,10 +115,26 @@
       </div>
       
       <!-- Mobile Menu Toggle -->
-      <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center p-2 text-primary hover:text-secondary transition-colors">
-        <span class="material-symbols-outlined text-[28px]">menu</span>
+      <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center p-2 text-primary hover:text-secondary transition-colors" aria-expanded="false" aria-controls="mobile-menu-panel">
+        <span id="mobile-menu-icon" class="material-symbols-outlined text-[28px]">menu</span>
       </button>
     </div>
+  </div>
+
+  <!-- Mobile Menu Panel -->
+  <div id="mobile-menu-panel" class="hidden lg:hidden bg-white border-t border-outline-variant shadow-xl">
+    <nav class="flex flex-col divide-y divide-outline-variant">
+      <a href="personal-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Personal Loan</a>
+      <a href="business-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Business Loan</a>
+      <a href="professional-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Professional Loan</a>
+      <a href="medical-equipment-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Medical Equipment Loan</a>
+      <a href="car-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Car Loan</a>
+      <a href="loan-against-property.html" class="px-margin-mobile py-3 font-semibold text-primary">Loan Against Property</a>
+      <a href="about.html" class="px-margin-mobile py-3 text-on-surface-variant">About Us</a>
+      <a href="track-application.html" class="px-margin-mobile py-3 font-semibold text-secondary">Track Status</a>
+      <a href="contact-us.html" class="px-margin-mobile py-3 text-on-surface-variant">Contact Us</a>
+      <a href="apply.html" class="mx-margin-mobile my-3 bg-secondary text-white text-center py-2.5 rounded-lg font-bold">Apply Now</a>
+    </nav>
   </div>
 
   <!-- Bottom Tier: Main Navigation (Blue Background) -->
@@ -144,9 +152,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="personal-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Personal Loan Overview</a>
-                 <a href="personal-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="personal-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="personal-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="personal-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="personal-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="personal-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="personal-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Personal+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -185,9 +193,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="business-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Business Loan Overview</a>
-                 <a href="business-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="business-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="business-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="business-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="business-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="business-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="business-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Business+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -215,9 +223,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="professional-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Professional Loan Overview</a>
-                 <a href="professional-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="professional-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="professional-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="professional-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="professional-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="professional-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="professional-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Professional+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -241,9 +249,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="working-capital.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Working Capital Overview</a>
-                 <a href="working-capital-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="working-capital-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="working-capital-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="working-capital-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="working-capital-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="working-capital-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="working-capital-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Working+Capital" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -260,9 +268,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="machinery-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Machinery Loan Overview</a>
-                 <a href="machinery-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="machinery-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="machinery-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="machinery-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="machinery-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="machinery-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="machinery-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Machinery+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -279,9 +287,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="medical-equipment-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Medical Equipment Overview</a>
-                 <a href="medical-equipment-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="medical-equipment-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="medical-equipment-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="medical-equipment-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="medical-equipment-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="medical-equipment-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="medical-equipment-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Medical+Equipment" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -298,9 +306,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="car-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Car Loan Overview</a>
-                 <a href="car-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="car-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="car-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="car-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="car-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="car-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="car-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Car+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -308,18 +316,18 @@
           </div>
         </div>
 
-        <!-- Short-Term Loan Against Property (Mega Menu) -->
+        <!-- Loan Against Property (Mega Menu) -->
         <div class="group flex items-center border-r border-[#1c2c56]/50 hover:bg-[#1c2c56] transition-colors cursor-pointer relative !bg-transparent text-white">
-          <a href="loan-against-property.html" class="py-4 px-3 lg:px-4 font-semibold inline-block whitespace-nowrap !text-white group-hover:!text-white">Short-Term Loan Against Property</a>
+          <a href="loan-against-property.html" class="py-4 px-3 lg:px-4 font-semibold inline-block whitespace-nowrap !text-white group-hover:!text-white">Loan Against Property</a>
           
           <!-- Mega Menu Dropdown -->
           <div class="absolute top-full left-0 w-max bg-surface text-on-surface shadow-2xl border-t-2 border-secondary hidden group-hover:flex p-8 gap-12 rounded-b-xl z-50">
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
-                 <a href="loan-against-property.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Short-Term Loan Against Property Overview</a>
-                 <a href="loan-against-property-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="loan-against-property-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="loan-against-property-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="loan-against-property.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Loan Against Property Overview</a>
+                 <a href="loan-against-property-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="loan-against-property-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="loan-against-property-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="loan-against-property-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Loan+Against+Property" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -338,8 +346,6 @@
 </header>
 <!-- END HEADER -->
 
-      <link rel="stylesheet" href="css/header-footer.css">
-
       <!--search section style end here--> 
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -350,11 +356,11 @@
 
             <picture>
 
-               <source media="(max-width: 767px)" srcset="img/inner-banners/LAP-east-mob.svg" width="" height="" alt="loan against property">
+               <source media="(max-width: 767px)" srcset="/img/inner-banners/LAP-east-mob.svg" width="" height="" alt="loan against property">
 
-               <source media="(max-width: 1920px)" srcset="img/banner-lap.svg">
+               <source media="(max-width: 1920px)" srcset="/img/banner-lap.svg">
 
-               <img src="img/banner-lap.svg" alt="loan against property" width="100%" height="">
+               <img class="max-w-full h-auto object-contain shadow-sm rounded-2xl" src="/img/banner-lap.svg" alt="loan against property" width="100%" >
 
             </picture>
 
@@ -486,7 +492,7 @@
 
                                                 <span>
 
-                                                <img src="img/financing-education.svg" width="40" height="40" alt="Higher education">
+                                                <img src="/img/Fund-business-expansion-or-diversification.svg" width="40" height="40" alt="Expand an existing business">
 
                                                 </span>
 
@@ -498,7 +504,7 @@
 
                                                 <span>
 
-                                                <img src="img/wedding-celebrations.svg" width="40" height="40" alt="Wedding celebrations">
+                                                <img src="/img/wedding-celebrations.svg" width="40" height="40" alt="Wedding celebrations">
 
                                                 </span>
 
@@ -510,7 +516,7 @@
 
                                                 <span>
 
-                                                <img src="img/medical-emergencies.svg" width="40" height="40" alt="Medical expenses and hospital bills">
+                                                <img src="/img/medical-emergencies.svg" width="40" height="40" alt="Medical expenses and hospital bills">
 
                                                 </span>
 
@@ -530,7 +536,7 @@
 
                                                 <span>
 
-                                                <img src="img/travel-or-vacation.svg" width="40" height="40" alt="Travel">
+                                                <img src="/img/home-redecorations.svg" width="40" height="40" alt="Renovate business infrastructure or a home">
 
                                                 </span>
 
@@ -542,7 +548,7 @@
 
                                                 <span>
 
-                                                <img src="img/home-redecorations.svg" width="40" height="40" alt="Home redecorations and revamps">
+                                                <img src="/img/financing-education.svg" width="40" height="40" alt="Fund overseas higher education">
 
                                                 </span>
 
@@ -634,7 +640,7 @@
 
                                     <div class="container">
 
-                                       <!--<h2 class="title mb-4 text-center">Apply for Pre-Owned Car Loan online in <span>4 Easy Steps <img src="img/documents-table-arrow.svg" width="35" height="35" alt="Arrow Logo" /></span></h2>-->
+                                       <!--<h2 class="title mb-4 text-center">Apply for Pre-Owned Car Loan online in <span>4 Easy Steps <img src="/img/documents-table-arrow.svg" width="35" height="35" alt="Arrow Logo" /></span></h2>-->
 
                                        <!-- <h1 class="fcblue" align="center">Apply for Personal Loan online in <span class="fcyellow">5 Easy Steps</span></h1> -->
 
@@ -644,13 +650,13 @@
 
                                              <div class="stepdiv no-after">
 
-                                                <img src="img/step-circle1.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">
+                                                <img src="/img/step-circle1.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">
 
                                                 <div class="step">
 
                                                    <div class="dot">
 
-                                                      <img src="img/icon-step1.svg" width="40" height="40" alt="Laptop Logo"><span class="hidden_Mobile"><br>Apply<br>Online</span>
+                                                      <img src="/img/icon-step1.svg" width="40" height="40" alt="Laptop Logo"><span class="hidden_Mobile"><br>Apply<br>Online</span>
 
                                                    </div>
 
@@ -672,13 +678,13 @@
 
                                              <div class="stepdiv">
 
-                                                <img src="img/step-circle2.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">
+                                                <img src="/img/step-circle2.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">
 
                                                 <div class="step step2">
 
                                                    <div class="dot">
 
-                                                      <img src="img/enter-residence-details.svg" alt="Document Required Logo"><span class="hidden_Mobile"><br>Enter<br>Property<br>Details</span>
+                                                      <img src="/img/enter-residence-details.svg" alt="Document Required Logo"><span class="hidden_Mobile"><br>Enter<br>Property<br>Details</span>
 
                                                    </div>
 
@@ -700,13 +706,13 @@
 
                                              <div class="stepdiv">
 
-                                                <img src="img/step-circle3.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">
+                                                <img src="/img/step-circle3.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">
 
                                                 <div class="step">
 
                                                    <div class="dot">
 
-                                                      <img src="img/enter-occupation-details.svg" width="40" height="40" alt="Verfied Logo" class="step3-img"><span class="hidden_Mobile"><br>Enter<br>Occupation<br>Details<br></span>
+                                                      <img src="/img/enter-occupation-details.svg" width="40" height="40" alt="Verfied Logo" class="step3-img"><span class="hidden_Mobile"><br>Enter<br>Occupation<br>Details<br></span>
 
                                                    </div>
 
@@ -728,13 +734,13 @@
 
                                              <div class="stepdiv">
 
-                                                <img src="img/step-circle2.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">
+                                                <img src="/img/step-circle2.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">
 
                                                 <div class="step step2">
 
                                                    <div class="dot">
 
-                                                      <img src="img/icon-step3.svg" width="40" height="40" alt="timer logo"><span class="hidden_Mobile"><br>Verification</span>
+                                                      <img src="/img/icon-step3.svg" width="40" height="40" alt="timer logo"><span class="hidden_Mobile"><br>Verification</span>
 
                                                    </div>
 
@@ -756,13 +762,13 @@
 
                                           <!--    <div class="stepdiv">-->
 
-                                          <!--        <img src="img/step-circle5.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">-->
+                                          <!--        <img src="/img/step-circle5.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">-->
 
                                           <!--        <div class="step">-->
 
                                           <!--            <div class="dot">-->
 
-                                          <!--                <img src="img/icon-step5.svg" width="40" height="40" alt="Payment Confirmation logo"><span class="hidden_Mobile"><br>Instant<br>Disbursal</span>-->
+                                          <!--                <img src="/img/icon-step5.svg" width="40" height="40" alt="Payment Confirmation logo"><span class="hidden_Mobile"><br>Instant<br>Disbursal</span>-->
 
                                           <!--            </div>-->
 
@@ -866,7 +872,7 @@
 
                                                 <span>
 
-                                                <img src="img/collateral-free.svg" width="40" height="40" alt="Unsecured and collateral-free loans logo">
+                                                <img src="/img/Simplified-documentation-process.svg" width="40" height="40" alt="Minimal documentation">
 
                                                 </span>
 
@@ -878,7 +884,7 @@
 
                                                 <span>
 
-                                                <img src="img/quick-approval.svg" width="40" height="40" alt="Short turn around time for loan approval logo">
+                                                <img src="/img/quick-approval.svg" width="40" height="40" alt="Short turn around time for loan approval logo">
 
                                                 </span>
 
@@ -890,7 +896,7 @@
 
                                                 <span>
 
-                                                <img src="img/instant-disbursal.svg" width="40" height="40" alt="Quick loan disbursal facility logo">
+                                                <img src="/img/instant-disbursal.svg" width="40" height="40" alt="Quick loan disbursal facility logo">
 
                                                 </span>
 
@@ -902,7 +908,7 @@
 
                                                 <span>
 
-                                                <img src="img/competitive-interest-rate-charges.svg" width="40" height="40" alt="Competitively priced low-interest rate loan schemes logo">
+                                                <img src="/img/competitive-interest-rate-charges.svg" width="40" height="40" alt="Competitively priced low-interest rate loan schemes logo">
 
                                                 </span>
 
@@ -922,7 +928,7 @@
 
                                                 <span>
 
-                                                <img src="img/no-penalty-prepayment-foreclosure.svg" width="40" height="40" alt="No foreclosure penalty logo">
+                                                <img src="/img/competitive-interest-rate-charges.svg" width="40" height="40" alt="Competitive interest rate &amp; charges">
 
                                                 </span>
 
@@ -934,7 +940,7 @@
 
                                                 <span>
 
-                                                <img src="img/flexible-repayment-plans.svg" class="img_blue" width="40" height="40" alt="Flexible repayment tenure logo">
+                                                <img src="/img/flexible-repayment-tenure.svg" class="img_blue" width="40" height="40" alt="Flexible repayment tenure of up to 180 months">
 
                                                 </span>
 
@@ -946,7 +952,7 @@
 
                                                 <span>
 
-                                                <img src="img/pl-no-hidden-charges.svg" width="40" height="40" alt="No hidden charges logo">
+                                                <img src="/img/pl-no-hidden-charges.svg" width="40" height="40" alt="No hidden charges logo">
 
                                                 </span>
 
@@ -958,7 +964,7 @@
 
                                                 <span>
 
-                                                <img src="img/simple-step-online-application.svg" width="40" height="40" alt="Collateral-free logo">
+                                                <img src="/img/simple-step-online-application.svg" width="40" height="40" alt="Collateral-free logo">
 
                                                 </span>
 
@@ -990,7 +996,7 @@
 
                                                    <span>
 
-                                                   <img src="img/KYC-documents.svg" width="40" height="40" alt="Identity Proof">
+                                                   <img src="/img/KYC-documents.svg" width="40" height="40" alt="Identity Proof">
 
                                                    </span>
 
@@ -1002,7 +1008,7 @@
 
                                                    <span>
 
-                                                   <img src="img/address-proof.svg" width="40" height="40" alt="Address proof">
+                                                   <img src="/img/address-proof.svg" width="40" height="40" alt="Address proof">
 
                                                    </span>
 
@@ -1022,7 +1028,7 @@
 
                                                    <span>
 
-                                                   <img src="img/proof-employment.svg" width="40" height="40" alt="Income Proof">
+                                                   <img src="/img/employment.svg" width="40" height="40" alt="Income Proof">
 
                                                    </span>
 
@@ -1066,7 +1072,7 @@
 
                                           <div class="plel_box_img">
 
-                                             <img src="img/age.svg" width="50" height="50" alt="Age Requirement">
+                                             <img src="/img/age.svg" width="50" height="50" alt="Age Requirement">
 
                                           </div>
 
@@ -1078,7 +1084,7 @@
 
                                           <div class="plel_box_img">
 
-                                             <img src="img/citizenship.svg" width="50" height="50" alt="Citizenship Status">
+                                             <img src="/img/citizenship.svg" width="50" height="50" alt="Citizenship Status">
 
                                           </div>
 
@@ -1090,7 +1096,7 @@
 
                                           <div class="plel_box_img">
 
-                                             <img src="img/employment.svg" width="50" height="50" alt="Work Experience logo">
+                                             <img src="/img/employment.svg" width="50" height="50" alt="Work Experience logo">
 
                                           </div>
 
@@ -1102,7 +1108,7 @@
 
                                           <div class="plel_box_img">
 
-                                             <img src="img/income.svg" width="50" height="50" alt="Monthly Salary Required">
+                                             <img src="/img/income.svg" width="50" height="50" alt="Monthly Salary Required">
 
                                           </div>
 
@@ -1114,7 +1120,7 @@
 
                                           <div class="plel_box_img">
 
-                                             <img src="img/employment.svg" width="50" height="50" alt="Employment Required">
+                                             <img src="/img/employment.svg" width="50" height="50" alt="Employment Required">
 
                                           </div>
 
@@ -1154,7 +1160,7 @@
 
                                              <span>
 
-                                             <img src="img/KYC-documents.svg" width="40" height="40" alt="Identity Proof">
+                                             <img src="/img/KYC-documents.svg" width="40" height="40" alt="Identity Proof">
 
                                              </span>
 
@@ -1166,7 +1172,7 @@
 
                                              <span>
 
-                                             <img src="img/address-proof.svg" width="40" height="40" alt="Address proof">
+                                             <img src="/img/address-proof.svg" width="40" height="40" alt="Address proof">
 
                                              </span>
 
@@ -1178,7 +1184,7 @@
 
                                              <span>
 
-                                             <img src="img/address-proof.svg" width="40" height="40" alt="Address proof">
+                                             <img src="/img/address-proof.svg" width="40" height="40" alt="Address proof">
 
                                              </span>
 
@@ -1198,7 +1204,7 @@
 
                                              <span>
 
-                                             <img src="img/proof-employment.svg" width="40" height="40" alt="Income Proof">
+                                             <img src="/img/income.svg" width="40" height="40" alt="Bank Statement-12 Months">
 
                                              </span>
 
@@ -1210,7 +1216,7 @@
 
                                              <span>
 
-                                             <img src="img/proof-employment.svg" width="40" height="40" alt="Income Proof">
+                                             <img src="/img/employment.svg" width="40" height="40" alt="Income Proof">
 
                                              </span>
 
@@ -1248,15 +1254,15 @@
 
                                     <ul>
 
-                                       <li>Lower interest rate</li>
+                                       <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Lower interest rate" class="w-7 h-7 object-contain" /></span><div>Lower interest rate</div></li>
 
-                                       <li>Longer and more flexible loan tenure</li>
+                                       <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Longer and more flexible loan tenure" class="w-7 h-7 object-contain" /></span><div>Longer and more flexible loan tenure</div></li>
 
-                                       <li>Higher loan amount</li>
+                                       <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Higher loan amount" class="w-7 h-7 object-contain" /></span><div>Higher loan amount</div></li>
 
-                                       <li>Higher LTV on the market value of the asset</li>
+                                       <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Higher LTV on the market value of the asset" class="w-7 h-7 object-contain" /></span><div>Higher LTV on the market value of the asset</div></li>
 
-                                       <li>Best-in-class customer service and query resolution</li>
+                                       <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Best-in-class customer service and query resolution" class="w-7 h-7 object-contain" /></span><div>Best-in-class customer service and query resolution</div></li>
 
                                     </ul>
 
@@ -1282,11 +1288,11 @@
 
                                     <ul>
 
-                                       <li>Click on  “Apply Now”.</li>
+                                       <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/easy-processing.svg" width="28" height="28" alt="Click on  “Apply Now”." class="w-7 h-7 object-contain" /></span><div>Click on  “Apply Now”.</div></li>
 
-                                       <li>Fill in the required personal, professional, and financial details in the form.</li>
+                                       <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Fill in the required personal, professional, and financial details in the form." class="w-7 h-7 object-contain" /></span><div>Fill in the required personal, professional, and financial details in the form.</div></li>
 
-                                       <li>Submit all the necessary documents.</li>
+                                       <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Submit all the necessary documents." class="w-7 h-7 object-contain" /></span><div>Submit all the necessary documents.</div></li>
 
                                     </ul>
 
@@ -1334,15 +1340,15 @@
 
                                              <ul>
 
-                                                <li>Expanding an existing business.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Expanding an existing business." class="w-7 h-7 object-contain" /></span><div>Expanding an existing business.</div></li>
 
-                                                <li>Consolidating high-interest debt.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Consolidating high-interest debt." class="w-7 h-7 object-contain" /></span><div>Consolidating high-interest debt.</div></li>
 
-                                                <li>Renovating business infrastructure or a home.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Renovating business infrastructure or a home." class="w-7 h-7 object-contain" /></span><div>Renovating business infrastructure or a home.</div></li>
 
-                                                <li>Paying for a medical emergency.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/medical-emergencies.svg" width="28" height="28" alt="Paying for a medical emergency." class="w-7 h-7 object-contain" /></span><div>Paying for a medical emergency.</div></li>
 
-                                                <li>Funding overseas higher education.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/financing-education.svg" width="28" height="28" alt="Funding overseas higher education." class="w-7 h-7 object-contain" /></span><div>Funding overseas higher education.</div></li>
 
                                              </ul>
 
@@ -1376,11 +1382,11 @@
 
                                              <ul>
 
-                                                <li>Click on  “Apply Now” button.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/easy-processing.svg" width="28" height="28" alt="Click on  “Apply Now” button." class="w-7 h-7 object-contain" /></span><div>Click on  “Apply Now” button.</div></li>
 
-                                                <li>Fill in the required personal, professional, and financial details on the form.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Fill in the required personal, professional, and financial details on the form." class="w-7 h-7 object-contain" /></span><div>Fill in the required personal, professional, and financial details on the form.</div></li>
 
-                                                <li>Submit all the necessary documents.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Submit all the necessary documents." class="w-7 h-7 object-contain" /></span><div>Submit all the necessary documents.</div></li>
 
                                              </ul>
 
@@ -1514,17 +1520,15 @@
 
       <input type="hidden" id="session_lsq_status" value="1">
 
-      <link rel="stylesheet" href="css/plugins/responsive.css">
+      <link rel="stylesheet" href="/css/plugins/responsive.css">
 
-      <link rel="stylesheet" href="css/subscribe.css">
-
-      <link rel="stylesheet" href="css/header-footer.css">
+      <link rel="stylesheet" href="/css/subscribe.css">
 
       <a href="javascript:" class="back-to-top" id="back-to-top"><i class="fa fa-arrow-up"></i> </a>
 
       <!-- new design callback start from here -->
 
-      <a href="" class="chatbot mbldisplaynone" id="custom-ym-chat-iconn"><img src="img/lets-chat.svg" width="150" height="150" alt="Poonawalla Fincorp Website Chatbot"></a>
+      <a href="" class="chatbot mbldisplaynone" id="custom-ym-chat-iconn"><img src="/img/lets-chat.svg" width="150" height="150" alt="Poonawalla Fincorp Website Chatbot"></a>
 
       <div id="feedback-form" class="feedback-form">
 
@@ -1536,7 +1540,7 @@
 
                <a href="" class=" apply-btn alignmidd" id="custom-ym-chat-icon-mobile">
 
-                  <img src="img/lets-chat-mobile.svg" class="letschatimg" alt="lets chat logo" width="20" height="20"> 
+                  <img src="/img/lets-chat-mobile.svg" class="letschatimg" alt="lets chat logo" width="20" height="20"> 
 
                   <h6 class="letschattext">Let's Chat</h6>
 
@@ -1546,8 +1550,6 @@
 
          </div>
 
-      
-
       <script type="text/javascript"> </script>
 
       <script defer=""></script>
@@ -1556,11 +1558,9 @@
 
       <input type="hidden" id="session_lsq_status" value="1">
 
-      <link rel="stylesheet" href="css/plugins/responsive.css">
+      <link rel="stylesheet" href="/css/plugins/responsive.css">
 
-      <link rel="stylesheet" href="css/subscribe.css">
-
-      <link rel="stylesheet" href="css/header-footer.css">
+      <link rel="stylesheet" href="/css/subscribe.css">
 
       <a href="javascript:" class="back-to-top" id="back-to-top"><i class="fa fa-arrow-up"></i> </a>
 
@@ -1572,19 +1572,15 @@
 
       <!-- jQuery -->
 
-      
+      <script src="/js/scrollIt.min.js" defer=""></script>
 
-      
+      <script src="/js/cookiealert.js" defer=""></script>
 
-      <script src="js/scrollIt.min.js" defer=""></script>
-
-      <script src="js/cookiealert.js" defer=""></script>
-
-      <script src="js/animated.headline.js" defer=""></script>
+      <script src="/js/animated.headline.js" defer=""></script>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
 
-      <script src="js/scripts.js" defer=""></script>
+      <script src="/js/scripts.js" defer=""></script>
 
      <script>
 
@@ -1659,8 +1655,6 @@ $(document).ready(function(){
 });
 
 </script>
-
-
 
       <script>
 
@@ -1868,8 +1862,9 @@ $('.awdcarausel .owl-carousel').owlCarousel({
 <footer class="bg-primary text-white border-t border-outline-variant/20 pt-12 pb-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         <div class="space-y-4">
-            <p class="text-lg font-bold">Credify<span class="text-secondary">Capital</span></p>
-            <p class="text-xs text-white/80 leading-relaxed">Smart Solutions. Fastest Approvals.</p>
+            <a href="index.html" class="inline-block group mb-4">
+        <img src="/img/credify-clean-logo.png" alt="Credify Capital Logo" class="h-14 md:h-20 w-auto object-contain bg-white px-3.5 py-2.5 rounded-2xl transition-transform duration-300 group-hover:scale-105 shadow-md" />
+      </a><p class="text-xs text-white/80 leading-relaxed">Smart Solutions. Fastest Approvals.</p>
         </div>
         <div>
             <p class="text-xs font-bold uppercase tracking-wider text-secondary mb-3">Our Frameworks</p>
@@ -1903,15 +1898,8 @@ $('.awdcarausel .owl-carousel').owlCarousel({
 </footer>
 <!-- END FOOTER -->
 
-
-
-<script defer="" src="js/jquery.validate.js"></script>
-<script defer="" src="js/additional-methods.js"></script>
-
-
-
-
-      
+<script defer="" src="/js/jquery.validate.js"></script>
+<script defer="" src="/js/additional-methods.js"></script>
 
       <script></script>
 
@@ -1923,7 +1911,7 @@ $('.awdcarausel .owl-carousel').owlCarousel({
 
             <a href="apply.html" class="d-block mb-2 quick-desktop">
 
-            <img src="img/icon_quickapply.svg" alt="Contact Us logo" width="40" height="40">
+            <img src="/img/icon_quickapply.svg" alt="Contact Us logo" width="40" height="40">
 
             <span>Quick Apply</span>
 
@@ -1931,7 +1919,7 @@ $('.awdcarausel .owl-carousel').owlCarousel({
 
             <a href="https://api.whatsapp.com/send?phone=919999406707" target="_blank" rel="noopener noreferrer" class="d-block whatsapp-ql">
 
-            <img src="img/whatsapp-ql.svg" alt="Whatsapp logo" width="40" height="40">
+            <img src="/img/whatsapp-ql.svg" alt="Whatsapp logo" width="40" height="40">
 
             <span>Connect on WhatsApp</span>
 
@@ -1945,7 +1933,7 @@ $('.awdcarausel .owl-carousel').owlCarousel({
 
                <a href="apply.html" class="alignmidd hide_desktop" id=" ">
 
-                  <img src="img/icon_applynow.svg" class="applynowimg" alt="Apply Now logo" width="20" height="20"> 
+                  <img src="/img/icon_applynow.svg" class="applynowimg" alt="Apply Now logo" width="20" height="20"> 
 
                   <h6 class="applytext">Apply Now</h6>
 
@@ -1957,7 +1945,7 @@ $('.awdcarausel .owl-carousel').owlCarousel({
 
                <a href="https://api.whatsapp.com/send?phone=919999406707" target="_blank" class="mlr10" id=" ">
 
-                  <img src="img/whatsapp-ql.svg" class="whatsappimg" alt="whatsapp logo" width="20" height="20"> 
+                  <img src="/img/whatsapp-ql.svg" class="whatsappimg" alt="whatsapp logo" width="20" height="20"> 
 
                   <h6 class="whatstext">Connect on <br> WhatsApp </h6>
 
@@ -1969,41 +1957,39 @@ $('.awdcarausel .owl-carousel').owlCarousel({
 
       </div>
 
-      <!--<script defer src="js/action_callback.js"></script>-->
+      <!--<script defer src="/js/action_callback.js"></script>-->
 
       <script defer=""></script>
 
       <!-- jQuery -->
 
-      
-
       <!-- bootstrap -->
 
-      <script src="js/bootstrap.min.js"></script>
+      <script src="/js/bootstrap.min.js"></script>
 
       <!-- scrollIt -->
 
-      <script src="js/scrollIt.min.js"></script>
+      <script src="/js/scrollIt.min.js"></script>
 
       <!-- owl carousel -->
 
-      <script src="js/owl.carousel.min.js"></script>
+      <script src="/js/owl.carousel.min.js"></script>
 
       <!-- isotope.pkgd.min js -->
 
       <!-- custom scripts -->
 
-      <script src="js/jspdf.min.js"></script>
+      <script src="/js/jspdf.min.js"></script>
 
-      <script src="js/jspdf.plugin.autotable.min.js"></script>
+      <script src="/js/jspdf.plugin.autotable.min.js"></script>
 
-      <script src="js/scripts.js"></script>
+      <script src="/js/scripts.js"></script>
 
       <!-- emi scripts -->
 
-      <script type="text/javascript" src="js/emi_lap.js"></script> 
+      <script type="text/javascript" src="/js/emi_lap.js"></script> 
 
-      <script type="text/javascript" src="js/new-acco.js"></script>
+      <script type="text/javascript" src="/js/new-acco.js"></script>
 
       <!-- owl scripts -->
 
@@ -2184,7 +2170,5 @@ $('.awdcarausel .owl-carousel').owlCarousel({
          })
 
       </script>
-
-
 
 </body></html><!-- ==== End Desktop Footer ==== -->

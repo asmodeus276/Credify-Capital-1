@@ -1,8 +1,5 @@
 <!DOCTYPE html><html lang="en"><head>
-<script src="js/jquery-3.6.0.min.js"></script>
-
-
-
+<script src="/js/jquery-3.6.0.min.js"></script>
 
 	<!-- Metas -->
 
@@ -26,7 +23,7 @@
 
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <link rel="apple-touch-icon" type="image/png" href="img/favicon.ico">
+    <link rel="apple-touch-icon" type="image/png" href="/img/favicon.ico">
 
 	<meta name="keywords" content="professional loan, professional loan online">
 
@@ -38,76 +35,71 @@
 
 	<!-- Favicon -->
 
-	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="shortcut icon" href="/img/favicon.ico">
 
 	<!-- Plugins -->
 
-	<link rel="stylesheet" href="css/plugins.css">
+	<link rel="stylesheet" href="/css/plugins.css">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- Core Style Css -->
 
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="/css/style.css">
 
-	<link rel="stylesheet" href="css/style-new.css">
+	<link rel="stylesheet" href="/css/style-new.css">
 
-	<link rel="stylesheet" href="css/style-pl.css">
+	<link rel="stylesheet" href="/css/style-pl.css">
 
-	<link rel="stylesheet" href="css/new-acco.css">
+	<link rel="stylesheet" href="/css/new-acco.css">
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script id="tailwind-config">try{
-  tailwind.config = {
-    corePlugins: { preflight: false },
-    theme: {
-      extend: {
-        colors: {
-          primary: '#142450',
-          secondary: '#b61722',
-          surface: '#f8f9ff',
-          'on-surface': '#0b1c30',
-          'on-surface-variant': '#45464f',
-          'primary-container': '#2b3a67',
-          'on-primary-container': '#96a5d9',
-          'outline-variant': '#c5c6d0'
-        },
-        fontFamily: {
-          'display-md': ['Inter'],
-          'label-md': ['Inter'],
-          'body-md': ['Inter'],
-          'headline-sm': ['Inter']
-        },
-        spacing: {
-          'margin-mobile': '16px',
-          'margin-desktop': '48px',
-          'gutter': '24px'
-        }
+<link rel="stylesheet" href="/css/tailwind-built.css">
+
+  <link rel="stylesheet" href="/css/loan-page-common.css">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/tailwind-built.css">
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var menuBtn = document.getElementById('mobile-menu-btn');
+  var menuPanel = document.getElementById('mobile-menu-panel');
+  var menuIcon = document.getElementById('mobile-menu-icon');
+  if (menuBtn && menuPanel) {
+    menuBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = !menuPanel.classList.contains('hidden');
+      menuPanel.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+      if (menuIcon) menuIcon.textContent = isOpen ? 'close' : 'menu';
+    });
+    document.addEventListener('click', function(e) {
+      if (!menuPanel.classList.contains('hidden') && !menuBtn.contains(e.target) && !menuPanel.contains(e.target)) {
+        menuPanel.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        if (menuIcon) menuIcon.textContent = 'menu';
       }
-    }
+    });
   }
-}catch(_e){}</script>
-  <link rel="stylesheet" href="css/loan-page-common.css">
+});
+</script>
+
 </head>
 
-<body style="padding-top: 108px;">
+<body class="bg-background text-on-background font-body-md pt-[64px] lg:pt-[116px]">
 <!-- START HEADER -->
 <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 shadow-md">
   <!-- Top Tier: Brand & Utilities (White Background) -->
   <div class="bg-white">
     <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop h-16 flex items-center justify-between">
       <!-- Logo -->
-      <a href="index.html" class="flex items-center gap-3 group">
-        <img src="logo-mark.png" alt="Credify Capital Logo" class="w-12 h-12 md:w-16 md:h-16 object-contain">
-        <span class="font-display-md text-display-md text-primary font-bold tracking-tight transition-colors group-hover:text-secondary">
-          Credify <span class="text-secondary group-hover:text-primary">Capital</span>
-        </span>
-      </a>
-
-      <!-- Desktop Utility Links -->
+      <a href="index.html" class="flex items-center group py-1.5">
+        <img src="/img/credify-full-logo.png" alt="Credify Capital Logo" class="h-14 md:h-18 lg:h-22 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-xs" />
+      </a><!-- Desktop Utility Links -->
       <div class="hidden lg:flex items-center gap-6 font-label-md text-label-md text-on-surface-variant">
         <a href="about.html" class="hover:text-primary transition-colors">About Us</a>
         <a href="partner-login.html" class="hover:text-primary transition-colors">Partner Login</a>
+        <a href="track-application.html" class="hover:text-primary transition-colors font-semibold text-secondary">Track Status</a>
         <a href="blogs.html" class="hover:text-primary transition-colors">Blogs</a>
         <a href="contact-us.html" class="hover:text-primary transition-colors">Contact Us</a>
         <a href="apply.html" class="bg-secondary text-white px-6 py-2 rounded-full font-bold hover:brightness-110 shadow-sm transition-all ml-2">
@@ -116,10 +108,26 @@
       </div>
       
       <!-- Mobile Menu Toggle -->
-      <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center p-2 text-primary hover:text-secondary transition-colors">
-        <span class="material-symbols-outlined text-[28px]">menu</span>
+      <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center p-2 text-primary hover:text-secondary transition-colors" aria-expanded="false" aria-controls="mobile-menu-panel">
+        <span id="mobile-menu-icon" class="material-symbols-outlined text-[28px]">menu</span>
       </button>
     </div>
+  </div>
+
+  <!-- Mobile Menu Panel -->
+  <div id="mobile-menu-panel" class="hidden lg:hidden bg-white border-t border-outline-variant shadow-xl">
+    <nav class="flex flex-col divide-y divide-outline-variant">
+      <a href="personal-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Personal Loan</a>
+      <a href="business-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Business Loan</a>
+      <a href="professional-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Professional Loan</a>
+      <a href="medical-equipment-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Medical Equipment Loan</a>
+      <a href="car-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Car Loan</a>
+      <a href="loan-against-property.html" class="px-margin-mobile py-3 font-semibold text-primary">Loan Against Property</a>
+      <a href="about.html" class="px-margin-mobile py-3 text-on-surface-variant">About Us</a>
+      <a href="track-application.html" class="px-margin-mobile py-3 font-semibold text-secondary">Track Status</a>
+      <a href="contact-us.html" class="px-margin-mobile py-3 text-on-surface-variant">Contact Us</a>
+      <a href="apply.html" class="mx-margin-mobile my-3 bg-secondary text-white text-center py-2.5 rounded-lg font-bold">Apply Now</a>
+    </nav>
   </div>
 
   <!-- Bottom Tier: Main Navigation (Blue Background) -->
@@ -137,9 +145,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="personal-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Personal Loan Overview</a>
-                 <a href="personal-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="personal-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="personal-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="personal-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="personal-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="personal-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="personal-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Personal+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -178,9 +186,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="business-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Business Loan Overview</a>
-                 <a href="business-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="business-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="business-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="business-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="business-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="business-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="business-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Business+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -208,9 +216,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="professional-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Professional Loan Overview</a>
-                 <a href="professional-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="professional-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="professional-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="professional-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="professional-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="professional-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="professional-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Professional+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -234,9 +242,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="working-capital.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Working Capital Overview</a>
-                 <a href="working-capital-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="working-capital-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="working-capital-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="working-capital-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="working-capital-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="working-capital-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="working-capital-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Working+Capital" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -253,9 +261,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="machinery-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Machinery Loan Overview</a>
-                 <a href="machinery-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="machinery-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="machinery-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="machinery-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="machinery-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="machinery-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="machinery-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Machinery+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -272,9 +280,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="medical-equipment-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Medical Equipment Overview</a>
-                 <a href="medical-equipment-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="medical-equipment-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="medical-equipment-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="medical-equipment-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="medical-equipment-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="medical-equipment-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="medical-equipment-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Medical+Equipment" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -291,9 +299,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="car-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Car Loan Overview</a>
-                 <a href="car-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="car-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="car-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="car-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="car-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="car-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="car-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Car+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -310,9 +318,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="loan-against-property.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Loan Against Property Overview</a>
-                 <a href="loan-against-property-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="loan-against-property-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="loan-against-property-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="loan-against-property-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="loan-against-property-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="loan-against-property-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="loan-against-property-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Loan+Against+Property" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -331,8 +339,6 @@
 </header>
 <!-- END HEADER -->
 
-<link rel="stylesheet" href="css/header-footer.css">
-
 <!--search section style end here--> 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -343,11 +349,11 @@
 
 			<picture>
 
-				<source media="(max-width: 767px)" srcset="img/inner-banners/LAP-west-mob.svg" width="" height="" alt="professional loan">
+				<source media="(max-width: 767px)" srcset="/img/inner-banners/LAP-west-mob.svg" width="" height="" alt="professional loan">
 
-				<source media="(max-width: 1920px)" srcset="img/banner-profloan.svg" alt="professional loan">
+				<source media="(max-width: 1920px)" srcset="/img/banner-profloan.svg" alt="professional loan">
 
-				<img src="img/banner-profloan.svg" alt="professional loan" width="100%" height="">
+				<img class="max-w-full h-auto object-contain shadow-sm rounded-2xl" src="/img/banner-profloan.svg" alt="professional loan" width="100%" >
 
 			</picture> 
 
@@ -364,8 +370,6 @@
         	</div>
 
 			</div>
-
-		
 
 		<div class="breadcrumbdiv">
 
@@ -464,11 +468,11 @@
 
         										<ul>
 
-        											<li>Expand your practice.</li>
+        											<li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/Fund-business-expansion-or-diversification.svg" width="28" height="28" alt="Expand your practice." class="w-7 h-7 object-contain" /></span><div>Expand your practice.</div></li>
 
-                                                    <li>Enhance your professional skills.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/Expand-your-workforce.svg" width="28" height="28" alt="Enhance your professional skills." class="w-7 h-7 object-contain" /></span><div>Enhance your professional skills.</div></li>
 
-                                                    <li>Renovate your office space.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/home-redecorations.svg" width="28" height="28" alt="Renovate your office space." class="w-7 h-7 object-contain" /></span><div>Renovate your office space.</div></li>
 
         										</ul>
 
@@ -494,21 +498,21 @@
 
         										<ul>
 
-        										    <li><strong>Competitive Interest Rates -</strong> Secure a Professional Loan for CA at competitive interest rates.</li>
+        										    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Competitive Interest Rates - Secure a Professional Loan for CA at competitive interest rates." class="w-7 h-7 object-contain" /></span><div><strong>Competitive Interest Rates -</strong> Secure a Professional Loan for CA at competitive interest rates.</div></li>
 
-                                                    <li><strong>Instant Disbursal -</strong> Get the loan directly into your bank account after verification.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/instant-disbursal.svg" width="28" height="28" alt="Instant Disbursal - Get the loan directly into your bank account after verification." class="w-7 h-7 object-contain" /></span><div><strong>Instant Disbursal -</strong> Get the loan directly into your bank account after verification.</div></li>
 
-                                                    <li><strong>Minimal Documentation -</strong> Just submit your KYC documents and address proof.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/Simplified-documentation-process.svg" width="28" height="28" alt="Minimal Documentation - Just submit your KYC documents and address proof." class="w-7 h-7 object-contain" /></span><div><strong>Minimal Documentation -</strong> Just submit your KYC documents and address proof.</div></li>
 
-                                                    <li><strong>Flexible EMIs -</strong> Repay the loan at your convenience with a loan tenure of up to 60 months.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/flexible-repayment-tenure.svg" width="28" height="28" alt="Flexible EMIs - Repay the loan at your convenience with a loan tenure of up to 60 months." class="w-7 h-7 object-contain" /></span><div><strong>Flexible EMIs -</strong> Repay the loan at your convenience with a loan tenure of up to 60 months.</div></li>
 
-                                                    <li><strong>Collateral-free -</strong> No collateral is required to get a loan for professionals.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/collateral-free.svg" width="28" height="28" alt="Collateral-free - No collateral is required to get a loan for professionals." class="w-7 h-7 object-contain" /></span><div><strong>Collateral-free -</strong> No collateral is required to get a loan for professionals.</div></li>
 
-                                                    <li><strong>No End-usage Restriction -</strong> Use the loan for any of your professional purposes.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/Unsecured-Business-Loans.svg" width="28" height="28" alt="No End-usage Restriction - Use the loan for any of your professional purposes." class="w-7 h-7 object-contain" /></span><div><strong>No End-usage Restriction -</strong> Use the loan for any of your professional purposes.</div></li>
 
-                                                    <li><strong>Easy Application -</strong> Just hit the ‘Apply Now’ button to apply.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/easy-processing.svg" width="28" height="28" alt="Easy Application - Just hit the ‘Apply Now’ button to apply." class="w-7 h-7 object-contain" /></span><div><strong>Easy Application -</strong> Just hit the ‘Apply Now’ button to apply.</div></li>
 
-                                                    <li><strong>Zero hidden charges -</strong> No other charges.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/pl-no-hidden-charges.svg" width="28" height="28" alt="Zero hidden charges - No other charges." class="w-7 h-7 object-contain" /></span><div><strong>Zero hidden charges -</strong> No other charges.</div></li>
 
         										</ul>
 
@@ -534,13 +538,13 @@
 
         										<ul>
 
-        											<li><strong>Age - </strong>Between 24 and 65 years.</li>
+        											<li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/age.svg" width="28" height="28" alt="Age - Between 24 and 65 years." class="w-7 h-7 object-contain" /></span><div><strong>Age - </strong>Between 24 and 65 years.</div></li>
 
-                                                    <li><strong>Citizenship - </strong>The applicant must be an Indian citizen.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/citizenship.svg" width="28" height="28" alt="Citizenship - The applicant must be an Indian citizen." class="w-7 h-7 object-contain" /></span><div><strong>Citizenship - </strong>The applicant must be an Indian citizen.</div></li>
 
-                                                    <li><strong>Work Experience - </strong>Applicant must be a practicing professional for at least 1-year post qualification.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/employment-status.svg" width="28" height="28" alt="Work Experience - Applicant must be a practicing professional for at least 1-year post qualification." class="w-7 h-7 object-contain" /></span><div><strong>Work Experience - </strong>Applicant must be a practicing professional for at least 1-year post qualification.</div></li>
 
-                                                    <li><strong>Income - </strong>Applicant must have a minimum annual income of ₹3 Lakh.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/income.svg" width="28" height="28" alt="Income - Applicant must have a minimum annual income of ₹3 Lakh." class="w-7 h-7 object-contain" /></span><div><strong>Income - </strong>Applicant must have a minimum annual income of ₹3 Lakh.</div></li>
 
         										</ul>
 
@@ -570,13 +574,13 @@
 
         										<ul>
 
-        											<li><strong>KYC-related Documents for Self-employed Professionals – </strong>PAN Card/Aadhaar Card/Driving License/Voter ID/Passport, residence address proof, business address proof, the firm or member card (only for CA and CS).</li>
+        											<li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/KYC-documents.svg" width="28" height="28" alt="KYC-related Documents for Self-employed Professionals – PAN Card/Aadhaar Card/Driving License/Voter ID/Passport, residence address proof, business address proof, the firm or member card (only for CA and CS)." class="w-7 h-7 object-contain" /></span><div><strong>KYC-related Documents for Self-employed Professionals – </strong>PAN Card/Aadhaar Card/Driving License/Voter ID/Passport, residence address proof, business address proof, the firm or member card (only for CA and CS).</div></li>
 
-                                                    <li><strong>KYC-related Documents for Firm or Company – </strong>business address proofs, applicable registrations, PAN Card/Aadhaar Card/Driving License/Voter ID/Passport of the key persons and their residence address proof.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/KYC-documents.svg" width="28" height="28" alt="KYC-related Documents for Firm or Company – business address proofs, applicable registrations, PAN Card/Aadhaar Card/Driving License/Voter ID/Passport of the key persons and their residence address proof." class="w-7 h-7 object-contain" /></span><div><strong>KYC-related Documents for Firm or Company – </strong>business address proofs, applicable registrations, PAN Card/Aadhaar Card/Driving License/Voter ID/Passport of the key persons and their residence address proof.</div></li>
 
-                                                    <li><strong>Financial Documents – </strong>Last six months’ bank account statement.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/income.svg" width="28" height="28" alt="Financial Documents – Last six months’ bank account statement." class="w-7 h-7 object-contain" /></span><div><strong>Financial Documents – </strong>Last six months’ bank account statement.</div></li>
 
-                                                    <li><strong>Professional Qualification Proofs – </strong>Professional degree certificate and certificate of practice.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/employment.svg" width="28" height="28" alt="Professional Qualification Proofs – Professional degree certificate and certificate of practice." class="w-7 h-7 object-contain" /></span><div><strong>Professional Qualification Proofs – </strong>Professional degree certificate and certificate of practice.</div></li>
 
         										</ul>
 
@@ -604,13 +608,13 @@
 
         										<ul>
 
-        										    <li><strong>Step 1: </strong>Click on the ‘<strong>Apply Now</strong>’ button.</li>
+        										    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/easy-processing.svg" width="28" height="28" alt="Step 1: Click on the ‘Apply Now’ button." class="w-7 h-7 object-contain" /></span><div><strong>Step 1: </strong>Click on the ‘<strong>Apply Now</strong>’ button.</div></li>
 
-                                                    <li><strong>Step 2: </strong>Select your applicant type – individual or firm and then select your profession.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Step 2: Select your applicant type – individual or firm and then select your profession." class="w-7 h-7 object-contain" /></span><div><strong>Step 2: </strong>Select your applicant type – individual or firm and then select your profession.</div></li>
 
-                                                    <li><strong>Step 3: </strong>Fill in the required details on the loan application form.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Step 3: Fill in the required details on the loan application form." class="w-7 h-7 object-contain" /></span><div><strong>Step 3: </strong>Fill in the required details on the loan application form.</div></li>
 
-                                                    <li><strong>Step 4: </strong>Upload necessary documents.</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Step 4: Upload necessary documents." class="w-7 h-7 object-contain" /></span><div><strong>Step 4: </strong>Upload necessary documents.</div></li>
 
         										</ul>
 
@@ -636,11 +640,11 @@
 
         										<ul>
 
-        										    <li>Professional Loan for CA for Self-employed CAs</li>
+        										    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Professional Loan for CA for Self-employed CAs" class="w-7 h-7 object-contain" /></span><div>Professional Loan for CA for Self-employed CAs</div></li>
 
-                                                    <li>Professional Loan for CA for Self-employed CSs</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Professional Loan for CA for Self-employed CSs" class="w-7 h-7 object-contain" /></span><div>Professional Loan for CA for Self-employed CSs</div></li>
 
-                                                    <li>Professional Loan for CA for Self-employed Doctors</li>
+                                                    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Professional Loan for CA for Self-employed Doctors" class="w-7 h-7 object-contain" /></span><div>Professional Loan for CA for Self-employed Doctors</div></li>
 
         										</ul>
 
@@ -664,7 +668,7 @@
 
     <div class="container">
 
-        <!--<h2 class="title mb-4 text-center">Apply for Business Loan Online in <span>5 Easy Steps <img src="img/documents-table-arrow.svg" width="35" height="35" alt="Arrow Logo" class="arrows"/></span></h2>-->
+        <!--<h2 class="title mb-4 text-center">Apply for Business Loan Online in <span>5 Easy Steps <img src="/img/documents-table-arrow.svg" width="35" height="35" alt="Arrow Logo" class="arrows"/></span></h2>-->
 
         <!-- <h1 class="fcblue" align="center">Apply for Personal Loan online in <span class="fcyellow">5 Easy Steps</span></h1> -->
 
@@ -674,13 +678,13 @@
 
                 <div class="stepdiv no-after">
 
-                    <img src="img/step-circle1.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">
+                    <img src="/img/step-circle1.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">
 
                     <div class="step">
 
                         <div class="dot">
 
-                            <img src="img/icon-step1.svg" width="40" height="40" alt="Laptop Logo"><span class="hidden_Mobile"><br>Apply<br>Online</span>
+                            <img src="/img/icon-step1.svg" width="40" height="40" alt="Laptop Logo"><span class="hidden_Mobile"><br>Apply<br>Online</span>
 
                         </div>
 
@@ -702,13 +706,13 @@
 
                 <div class="stepdiv">
 
-                    <img src="img/step-circle2.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">
+                    <img src="/img/step-circle2.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">
 
                     <div class="step step2">
 
                         <div class="dot">
 
-                            <img src="img/personal-details.svg" width="40" height="40" alt="Document Required Logo"><span class="hidden_Mobile"><br>Personal<br>Details</span>
+                            <img src="/img/personal-details.svg" width="40" height="40" alt="Document Required Logo"><span class="hidden_Mobile"><br>Personal<br>Details</span>
 
                         </div>
 
@@ -730,13 +734,13 @@
 
                 <div class="stepdiv">
 
-                    <img src="img/step-circle1.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">
+                    <img src="/img/step-circle1.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">
 
                     <div class="step">
 
                         <div class="dot">
 
-                            <img src="img/icon-step3.svg" width="40" height="40" alt="Laptop Logo"><span class="hidden_Mobile"><br>Verification<br><br></span>
+                            <img src="/img/icon-step3.svg" width="40" height="40" alt="Laptop Logo"><span class="hidden_Mobile"><br>Verification<br><br></span>
 
                         </div>
 
@@ -758,13 +762,13 @@
 
             <!--     <div class="stepdiv no-after">-->
 
-            <!--        <img src="img/step-circle1.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">-->
+            <!--        <img src="/img/step-circle1.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">-->
 
             <!--        <div class="step">-->
 
             <!--            <div class="dot">-->
 
-            <!--                <img src="img/icon-step3.svg" width="40" height="40" alt="Laptop Logo"><span class="hidden_Mobile"><br>Apply<br>Online</span>-->
+            <!--                <img src="/img/icon-step3.svg" width="40" height="40" alt="Laptop Logo"><span class="hidden_Mobile"><br>Apply<br>Online</span>-->
 
             <!--            </div>-->
 
@@ -786,13 +790,13 @@
 
             <!--    <div class="stepdiv">-->
 
-            <!--        <img src="img/step-circle5.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">-->
+            <!--        <img src="/img/step-circle5.svg" alt="Semi Circle Logo" class="strps-circle-img img-fluid">-->
 
             <!--        <div class="step">-->
 
             <!--            <div class="dot">-->
 
-            <!--                <img src="img/icon-step5.svg" width="40" height="40" alt="Payment Confirmation logo"><span class="hidden_Mobile"><br>Instant<br>Disbursed</span>-->
+            <!--                <img src="/img/icon-step5.svg" width="40" height="40" alt="Payment Confirmation logo"><span class="hidden_Mobile"><br>Instant<br>Disbursed</span>-->
 
             <!--            </div>-->
 
@@ -888,13 +892,13 @@
 
                     									<ul> 
 
-                    									    <li>Must be a self-employed professional</li>
+                    									    <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Must be a self-employed professional" class="w-7 h-7 object-contain" /></span><div>Must be a self-employed professional</div></li>
 
-                                                            <li>Minimum business vintage: 2 years</li>
+                                                            <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/age.svg" width="28" height="28" alt="Minimum business vintage: 2 years" class="w-7 h-7 object-contain" /></span><div>Minimum business vintage: 2 years</div></li>
 
-                                                            <li>CIBIL score: 700+</li>
+                                                            <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="CIBIL score: 700+" class="w-7 h-7 object-contain" /></span><div>CIBIL score: 700+</div></li>
 
-                                                            <li>Income stability and valid professional registration</li>
+                                                            <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/income.svg" width="28" height="28" alt="Income stability and valid professional registration" class="w-7 h-7 object-contain" /></span><div>Income stability and valid professional registration</div></li>
 
                     									</ul>
 
@@ -914,15 +918,15 @@
 
 												        <ul>
 
-												            <li>PAN &amp; Aadhaar</li>
+												            <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/KYC-documents.svg" width="28" height="28" alt="PAN &amp; Aadhaar" class="w-7 h-7 object-contain" /></span><div>PAN &amp; Aadhaar</div></li>
 
-                                                            <li>Business registration or professional license</li>
+                                                            <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Business registration or professional license" class="w-7 h-7 object-contain" /></span><div>Business registration or professional license</div></li>
 
-                                                            <li>ITR &amp; bank statements</li>
+                                                            <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="ITR &amp; bank statements" class="w-7 h-7 object-contain" /></span><div>ITR &amp; bank statements</div></li>
 
-                                                                 <li>Address proof</li>
+                                                                 <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/address-proof.svg" width="28" height="28" alt="Address proof" class="w-7 h-7 object-contain" /></span><div>Address proof</div></li>
 
-                                                                      <li>Qualification certificates (if required)</li>
+                                                                      <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/employment.svg" width="28" height="28" alt="Qualification certificates (if required)" class="w-7 h-7 object-contain" /></span><div>Qualification certificates (if required)</div></li>
 
 												        </ul>
 
@@ -1022,7 +1026,6 @@
 
 					<div class="card tab-pane " aria-labelledby="tab-B" id="tab-B">
 
-
 						<div class="card-header" id="heading-B">
 
 							<h5 class="mb-0">
@@ -1040,7 +1043,6 @@
 					</div>		
 
 					<div class="card tab-pane " aria-labelledby="tab-C" id="tab-C" style="display:none;">
-
 
 						<div class="card-header" id="heading-C">
 
@@ -1060,7 +1062,6 @@
 
 					<div class="card tab-pane " aria-labelledby="tab-D" id="tab-D" style="display:none;">
 
-
 						<div class="card-header" id="heading-D">
 
 							<h5 class="mb-0">
@@ -1078,7 +1079,6 @@
 					</div>
 
 					<div class="card tab-pane " aria-labelledby="tab-E" id="tab-E" style="display:none;">
-
 
 						<div class="card-header" id="heading-E">
 
@@ -1098,7 +1098,6 @@
 
 					<div class="card tab-pane" aria-labelledby="tab-G" id="tab-G" style="display:none;">
 
-
 						<div class="card-header" id="heading-G">
 
 							<h5 class="mb-0">
@@ -1116,7 +1115,6 @@
 					</div>
 
 					<div class="card tab-pane" aria-labelledby="tab-H" id="tab-H" style="display:none;">
-
 
 						<div class="card-header" id="heading-H">
 
@@ -1148,7 +1146,7 @@
 
             <a href="apply.html" class="d-block mb-2 quick-desktop">
 
-            <img src="img/icon_quickapply.svg" alt="Contact Us logo" width="40" height="40">
+            <img src="/img/icon_quickapply.svg" alt="Contact Us logo" width="40" height="40">
 
             <span>Quick Apply</span>
 
@@ -1156,7 +1154,7 @@
 
             <a href="https://api.whatsapp.com/send?phone=919999406707" target="_blank" rel="noopener noreferrer" class="d-block whatsapp-ql">
 
-            <img src="img/whatsapp-ql.svg" alt="Whatsapp logo" width="40" height="40">
+            <img src="/img/whatsapp-ql.svg" alt="Whatsapp logo" width="40" height="40">
 
             <span>Connect on WhatsApp</span>
 
@@ -1170,7 +1168,7 @@
 
                <a href="apply.html" class="alignmidd hide_desktop" id=" ">
 
-                  <img src="img/icon_applynow.svg" class="applynowimg" alt="Apply Now logo" width="20" height="20"> 
+                  <img src="/img/icon_applynow.svg" class="applynowimg" alt="Apply Now logo" width="20" height="20"> 
 
                   <h6 class="applytext">Apply Now</h6>
 
@@ -1182,7 +1180,7 @@
 
                <a href="https://api.whatsapp.com/send?phone=919999406707" target="_blank" class="mlr10" id=" ">
 
-                  <img src="img/whatsapp-ql.svg" class="whatsappimg" alt="whatsapp logo" width="20" height="20"> 
+                  <img src="/img/whatsapp-ql.svg" class="whatsappimg" alt="whatsapp logo" width="20" height="20"> 
 
                   <h6 class="whatstext">Connect on <br> WhatsApp </h6>
 
@@ -1194,7 +1192,7 @@
 
       </div>
 
-<!--<script defer src="js/action_callback.js"></script>-->
+<!--<script defer src="/js/action_callback.js"></script>-->
 
 <script defer=""></script>
 
@@ -1202,19 +1200,17 @@
 
 <input type="hidden" id="session_lsq_status" value="1">
 
-    <link rel="stylesheet" href="css/plugins/responsive.css">
+    <link rel="stylesheet" href="/css/plugins/responsive.css">
 
-    <link rel="stylesheet" href="css/subscribe.css">
+    <link rel="stylesheet" href="/css/subscribe.css">
 
-    <link rel="stylesheet" href="css/cookiealert.css">
-
-    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="/css/cookiealert.css">
 
     <a href="javascript:" class="back-to-top" id="back-to-top"><i class="fa fa-arrow-up"></i> </a>
 
       <!-- new design callback start from here -->
 
-      <a href="" class="chatbot mbldisplaynone" id="custom-ym-chat-iconn"><img src="img/lets-chat.svg" width="150" height="150" alt="Poonawalla Fincorp Website Chatbot"></a>
+      <a href="" class="chatbot mbldisplaynone" id="custom-ym-chat-iconn"><img src="/img/lets-chat.svg" width="150" height="150" alt="Poonawalla Fincorp Website Chatbot"></a>
 
       <div id="feedback-form" class="feedback-form">
 
@@ -1226,7 +1222,7 @@
 
                <a href="" class=" apply-btn alignmidd" id="custom-ym-chat-icon-mobile">
 
-                  <img src="img/lets-chat-mobile.svg" class="letschatimg" alt="lets chat logo" width="20" height="20"> 
+                  <img src="/img/lets-chat-mobile.svg" class="letschatimg" alt="lets chat logo" width="20" height="20"> 
 
                   <h6 class="letschattext">Let's Chat</h6>
 
@@ -1236,8 +1232,6 @@
 
          </div>
 
-      
-
       <script type="text/javascript"> </script>
 
       <script defer=""></script>
@@ -1246,11 +1240,9 @@
 
       <input type="hidden" id="session_lsq_status" value="1">
 
-      <link rel="stylesheet" href="css/plugins/responsive.css">
+      <link rel="stylesheet" href="/css/plugins/responsive.css">
 
-      <link rel="stylesheet" href="css/subscribe.css">
-
-      <link rel="stylesheet" href="css/header-footer.css">
+      <link rel="stylesheet" href="/css/subscribe.css">
 
       <a href="javascript:" class="back-to-top" id="back-to-top"><i class="fa fa-arrow-up"></i> </a>
 
@@ -1262,19 +1254,15 @@
 
       <!-- jQuery -->
 
-      
+      <script src="/js/scrollIt.min.js" defer=""></script>
 
-      
+      <script src="/js/cookiealert.js" defer=""></script>
 
-      <script src="js/scrollIt.min.js" defer=""></script>
-
-      <script src="js/cookiealert.js" defer=""></script>
-
-      <script src="js/animated.headline.js" defer=""></script>
+      <script src="/js/animated.headline.js" defer=""></script>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
 
-      <script src="js/scripts.js" defer=""></script>
+      <script src="/js/scripts.js" defer=""></script>
 
      <script>
 
@@ -1349,8 +1337,6 @@ $(document).ready(function(){
 });
 
 </script>
-
-
 
       <script>
 
@@ -1558,8 +1544,9 @@ $('.awdcarausel .owl-carousel').owlCarousel({
 <footer class="bg-primary text-white border-t border-outline-variant/20 pt-12 pb-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         <div class="space-y-4">
-            <p class="text-lg font-bold">Credify<span class="text-secondary">Capital</span></p>
-            <p class="text-xs text-white/80 leading-relaxed">Smart Solutions. Fastest Approvals.</p>
+            <a href="index.html" class="inline-block group mb-4">
+        <img src="/img/credify-clean-logo.png" alt="Credify Capital Logo" class="h-14 md:h-20 w-auto object-contain bg-white px-3.5 py-2.5 rounded-2xl transition-transform duration-300 group-hover:scale-105 shadow-md" />
+      </a><p class="text-xs text-white/80 leading-relaxed">Smart Solutions. Fastest Approvals.</p>
         </div>
         <div>
             <p class="text-xs font-bold uppercase tracking-wider text-secondary mb-3">Our Frameworks</p>
@@ -1593,15 +1580,8 @@ $('.awdcarausel .owl-carousel').owlCarousel({
 </footer>
 <!-- END FOOTER -->
 
-
-
-<script defer="" src="js/jquery.validate.js"></script>
-<script defer="" src="js/additional-methods.js"></script>
-
-
-
-
-    
+<script defer="" src="/js/jquery.validate.js"></script>
+<script defer="" src="/js/additional-methods.js"></script>
 
     <script>
 
@@ -1613,15 +1593,13 @@ $('.awdcarausel .owl-carousel').owlCarousel({
 
 	<!-- jQuery -->
 
-	
-
 	<!-- bootstrap -->
 
-	<script src="js/bootstrap.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
 
 	<!-- scrollIt -->
 
-	<script src="js/scrollIt.min.js"></script>
+	<script src="/js/scrollIt.min.js"></script>
 
 	<!-- animated.headline -->
 
@@ -1629,23 +1607,23 @@ $('.awdcarausel .owl-carousel').owlCarousel({
 
 	<!-- owl carousel -->
 
-	<script src="js/owl.carousel.min.js"></script>
+	<script src="/js/owl.carousel.min.js"></script>
 
 	<!-- custom scripts -->
 
-	<script src="js/jspdf.min.js"></script>
+	<script src="/js/jspdf.min.js"></script>
 
-	<script src="js/jspdf.plugin.autotable.min.js"></script>
+	<script src="/js/jspdf.plugin.autotable.min.js"></script>
 
 	<!-- custom scripts -->
 
-	<script src="js/scripts.js"></script>
+	<script src="/js/scripts.js"></script>
 
 	<!-- emi scripts -->
 
-	<script type="text/javascript" src="js/emi_pl.js"></script>
+	<script type="text/javascript" src="/js/emi_pl.js"></script>
 
-    <script type="text/javascript" src="js/new-acco.js"></script>
+    <script type="text/javascript" src="/js/new-acco.js"></script>
 
 	<!-- owl scripts -->
 
@@ -1886,9 +1864,5 @@ $('.awdcarausel .owl-carousel').owlCarousel({
         })
 
     </script>
-
-
-
-
 
 </body><!-- Mirrored from poonawallafincorp.com/professional-loan-for-ca.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2025 13:19:46 GMT --></html><!-- ==== End Desktop Footer ==== -->

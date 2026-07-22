@@ -1,12 +1,12 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import {
   getFirestore,
   collection,
   addDoc,
   serverTimestamp
-} from "firebase/firestore";
-import { getAuth } from "firebase/auth";
+} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
 // Your web app's Firebase configuration
 // Replace these placeholders with your actual Firebase project credentials
@@ -71,6 +71,29 @@ export async function submitContactMessage(messageData) {
     return docRef.id;
   } catch (error) {
     console.error("Error submitting contact message: ", error);
+    throw error;
+  }
+}
+
+/**
+ * Submits a new partner application to the Firestore 'partnerApplications' collection.
+ * 
+ * @param {Object} partnerData - The data of the partner.
+ * @returns {Promise<string>} The ID of the newly created document.
+ */
+export async function submitPartnerApplication(partnerData) {
+  try {
+    const partnerCollectionRef = collection(db, "partnerApplications");
+
+    const docRef = await addDoc(partnerCollectionRef, {
+      ...partnerData,
+      createdAt: serverTimestamp()
+    });
+
+    console.log("Partner application successfully submitted with ID: ", docRef.id);
+    return docRef.id;
+  } catch (error) {
+    console.error("Error submitting partner application: ", error);
     throw error;
   }
 }

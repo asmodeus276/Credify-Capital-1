@@ -1,12 +1,9 @@
 <!DOCTYPE html><html lang="en"><head>
-<script src="js/jquery-3.6.0.min.js"></script>
-
+<script src="/js/jquery-3.6.0.min.js"></script>
 
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 
    <!-- /Added by HTTrack -->
-
-   
 
       <!-- Metas -->
 
@@ -30,7 +27,7 @@
 
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-      <link rel="apple-touch-icon" type="image/png" href="img/favicon.ico">
+      <link rel="apple-touch-icon" type="image/png" href="/img/favicon.ico">
 
       <meta name="keywords" content="personal loan, personal loan interest rates, lowest personal loan interest rates">
 
@@ -48,76 +45,71 @@
 
       <!-- Favicon -->
 
-      <link rel="shortcut icon" href="img/favicon.ico">
+      <link rel="shortcut icon" href="/img/favicon.ico">
 
       <!-- Plugins -->
 
-      <link rel="stylesheet" href="css/plugins.css">
+      <link rel="stylesheet" href="/css/plugins.css">
 
       <!-- Core Style Css -->
 
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="/css/style.css">
 
-      <link rel="stylesheet" href="css/style-new.css">
+      <link rel="stylesheet" href="/css/style-new.css">
 
-      <link rel="stylesheet" href="css/style-pl.css">
+      <link rel="stylesheet" href="/css/style-pl.css">
 
-      <link rel="stylesheet" href="css/new-acco.css">
+      <link rel="stylesheet" href="/css/new-acco.css">
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script id="tailwind-config">try{
-  tailwind.config = {
-    corePlugins: { preflight: false },
-    theme: {
-      extend: {
-        colors: {
-          primary: '#142450',
-          secondary: '#b61722',
-          surface: '#f8f9ff',
-          'on-surface': '#0b1c30',
-          'on-surface-variant': '#45464f',
-          'primary-container': '#2b3a67',
-          'on-primary-container': '#96a5d9',
-          'outline-variant': '#c5c6d0'
-        },
-        fontFamily: {
-          'display-md': ['Inter'],
-          'label-md': ['Inter'],
-          'body-md': ['Inter'],
-          'headline-sm': ['Inter']
-        },
-        spacing: {
-          'margin-mobile': '16px',
-          'margin-desktop': '48px',
-          'gutter': '24px'
-        }
+<link rel="stylesheet" href="/css/tailwind-built.css">
+
+  <link rel="stylesheet" href="/css/loan-page-common.css">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/tailwind-built.css">
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var menuBtn = document.getElementById('mobile-menu-btn');
+  var menuPanel = document.getElementById('mobile-menu-panel');
+  var menuIcon = document.getElementById('mobile-menu-icon');
+  if (menuBtn && menuPanel) {
+    menuBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = !menuPanel.classList.contains('hidden');
+      menuPanel.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+      if (menuIcon) menuIcon.textContent = isOpen ? 'close' : 'menu';
+    });
+    document.addEventListener('click', function(e) {
+      if (!menuPanel.classList.contains('hidden') && !menuBtn.contains(e.target) && !menuPanel.contains(e.target)) {
+        menuPanel.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        if (menuIcon) menuIcon.textContent = 'menu';
       }
-    }
+    });
   }
-}catch(_e){}</script>
-  <link rel="stylesheet" href="css/loan-page-common.css">
+});
+</script>
+
 </head>
 
-   <body style="padding-top: 108px;">
+   <body class="bg-background text-on-background font-body-md pt-[64px] lg:pt-[116px]">
 <!-- START HEADER -->
 <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 shadow-md">
   <!-- Top Tier: Brand & Utilities (White Background) -->
   <div class="bg-white">
     <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop h-16 flex items-center justify-between">
       <!-- Logo -->
-      <a href="index.html" class="flex items-center gap-3 group">
-        <img src="logo-mark.png" alt="Credify Capital Logo" class="w-12 h-12 md:w-16 md:h-16 object-contain">
-        <span class="font-display-md text-display-md text-primary font-bold tracking-tight transition-colors group-hover:text-secondary">
-          Credify <span class="text-secondary group-hover:text-primary">Capital</span>
-        </span>
-      </a>
-
-      <!-- Desktop Utility Links -->
+      <a href="index.html" class="flex items-center group py-1.5">
+        <img src="/img/credify-full-logo.png" alt="Credify Capital Logo" class="h-14 md:h-18 lg:h-22 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-xs" />
+      </a><!-- Desktop Utility Links -->
       <div class="hidden lg:flex items-center gap-6 font-label-md text-label-md text-on-surface-variant">
         <a href="about.html" class="hover:text-primary transition-colors">About Us</a>
         <a href="partner-login.html" class="hover:text-primary transition-colors">Partner Login</a>
+        <a href="track-application.html" class="hover:text-primary transition-colors font-semibold text-secondary">Track Status</a>
         <a href="blogs.html" class="hover:text-primary transition-colors">Blogs</a>
         <a href="contact-us.html" class="hover:text-primary transition-colors">Contact Us</a>
         <a href="apply.html" class="bg-secondary text-white px-6 py-2 rounded-full font-bold hover:brightness-110 shadow-sm transition-all ml-2">
@@ -126,10 +118,26 @@
       </div>
       
       <!-- Mobile Menu Toggle -->
-      <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center p-2 text-primary hover:text-secondary transition-colors">
-        <span class="material-symbols-outlined text-[28px]">menu</span>
+      <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center p-2 text-primary hover:text-secondary transition-colors" aria-expanded="false" aria-controls="mobile-menu-panel">
+        <span id="mobile-menu-icon" class="material-symbols-outlined text-[28px]">menu</span>
       </button>
     </div>
+  </div>
+
+  <!-- Mobile Menu Panel -->
+  <div id="mobile-menu-panel" class="hidden lg:hidden bg-white border-t border-outline-variant shadow-xl">
+    <nav class="flex flex-col divide-y divide-outline-variant">
+      <a href="personal-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Personal Loan</a>
+      <a href="business-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Business Loan</a>
+      <a href="professional-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Professional Loan</a>
+      <a href="medical-equipment-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Medical Equipment Loan</a>
+      <a href="car-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Car Loan</a>
+      <a href="loan-against-property.html" class="px-margin-mobile py-3 font-semibold text-primary">Loan Against Property</a>
+      <a href="about.html" class="px-margin-mobile py-3 text-on-surface-variant">About Us</a>
+      <a href="track-application.html" class="px-margin-mobile py-3 font-semibold text-secondary">Track Status</a>
+      <a href="contact-us.html" class="px-margin-mobile py-3 text-on-surface-variant">Contact Us</a>
+      <a href="apply.html" class="mx-margin-mobile my-3 bg-secondary text-white text-center py-2.5 rounded-lg font-bold">Apply Now</a>
+    </nav>
   </div>
 
   <!-- Bottom Tier: Main Navigation (Blue Background) -->
@@ -147,9 +155,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="personal-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Personal Loan Overview</a>
-                 <a href="personal-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="personal-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="personal-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="personal-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="personal-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="personal-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="personal-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Personal+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -188,9 +196,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="business-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Business Loan Overview</a>
-                 <a href="business-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="business-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="business-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="business-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="business-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="business-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="business-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Business+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -218,9 +226,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="professional-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Professional Loan Overview</a>
-                 <a href="professional-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="professional-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="professional-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="professional-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="professional-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="professional-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="professional-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Professional+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -244,9 +252,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="working-capital.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Working Capital Overview</a>
-                 <a href="working-capital-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="working-capital-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="working-capital-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="working-capital-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="working-capital-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="working-capital-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="working-capital-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Working+Capital" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -263,9 +271,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="machinery-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Machinery Loan Overview</a>
-                 <a href="machinery-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="machinery-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="machinery-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="machinery-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="machinery-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="machinery-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="machinery-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Machinery+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -282,9 +290,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="medical-equipment-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Medical Equipment Overview</a>
-                 <a href="medical-equipment-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="medical-equipment-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="medical-equipment-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="medical-equipment-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="medical-equipment-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="medical-equipment-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="medical-equipment-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Medical+Equipment" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -301,9 +309,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="car-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Car Loan Overview</a>
-                 <a href="car-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="car-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="car-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="car-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="car-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="car-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="car-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Car+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -320,9 +328,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="loan-against-property.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Loan Against Property Overview</a>
-                 <a href="loan-against-property-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="loan-against-property-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="loan-against-property-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="loan-against-property-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="loan-against-property-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="loan-against-property-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="loan-against-property-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Loan+Against+Property" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -343,13 +351,9 @@
 
     &gt;
 
-      <link rel="stylesheet" href="css/header-footer.css">
-
       <!--search section style end here--> 
 
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-     
 
       <section class="inner_banner">
 
@@ -357,11 +361,11 @@
 
             <picture>
 
-               <source media="(max-width: 767px)" srcset="img/pl-debt-consolidation.jpg" width="" height="" alt="personal loan interest rates">
+               <source media="(max-width: 767px)" srcset="/img/pl-debt-consolidation.jpg" width="" height="" alt="personal loan interest rates">
 
-               <source media="(max-width: 1920px)" srcset="img/banner-pl.svg">
+               <source media="(max-width: 1920px)" srcset="/img/banner-pl.svg">
 
-               <img src="img/banner-pl.svg" alt="personal loan interest rates" width="100%" height="">
+               <img class="max-w-full h-auto object-contain shadow-sm rounded-2xl" src="/img/banner-pl.svg" alt="personal loan interest rates" width="100%" >
 
             </picture>
 
@@ -443,7 +447,6 @@
                   </div>
                   <div id="collapse-A" class="show" style="display:block" aria-labelledby="heading-A">
                      <div class="card-body">
-                        
 
                         <div class="acco-item">
 
@@ -461,7 +464,7 @@
 
                                     <tbody><tr>
 
-                                       <td align="center"><img src="img/benefit-icons/interest-rate.svg" alt="Interest Rate Logo"></td>
+                                       <td align="center"><img src="/img/benefit-icons/interest-rate.svg" alt="Interest Rate Logo"></td>
 
                                        <td>
 
@@ -475,7 +478,7 @@
 
                                     <tr>
 
-                                       <td align="center"><img src="img/benefit-icons/Loan-processing-fees.svg" alt="Loan Fees Logo"></td>
+                                       <td align="center"><img src="/img/benefit-icons/Loan-processing-fees.svg" alt="Loan Fees Logo"></td>
 
                                        <td>
 
@@ -489,7 +492,7 @@
 
                                     <tr>
 
-                                       <td align="center"><img src="img/benefit-icons/Pre-payment-charges.svg" alt="Payment Logo"></td>
+                                       <td align="center"><img src="/img/benefit-icons/Pre-payment-charges.svg" alt="Payment Logo"></td>
 
                                        <td>
 
@@ -503,7 +506,7 @@
 
                                     <tr>
 
-                                       <td align="center"><img src="img/benefit-icons/Loan-processing-fees.svg" alt="Loan Fees Logo"></td>
+                                       <td align="center"><img src="/img/benefit-icons/Loan-processing-fees.svg" alt="Loan Fees Logo"></td>
 
                                        <td>
 
@@ -617,7 +620,7 @@
 
                                              <div class="text-center">
 
-                                                <span style="display: none;margin-bottom: 6px;color: #223a72;" id="calculate-prompt">Click on Calculate button</span>
+                                                <span style="display: none;margin-bottom: 6px;color: #142450;" id="calculate-prompt">Click on Calculate button</span>
 
                                                 <a href="javascript:;" id="caculate-emi-btn" class="blue-btn blue-btn-bg btncal mb-2" style="background-color: #e6b120;">
 
@@ -1221,23 +1224,29 @@
 
                                     <ul>
 
-                                       <li class="mb-20"><strong>Check your credit score: </strong> 
+                                       <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Check your credit score:  
+
+                                          Lenders use your credit score to determine your creditworthiness, and a higher score can help you secure a lower interest rate. Make sure your credit report is accurate and dispute any errors." class="w-7 h-7 object-contain" /></span><div><strong>Check your credit score: </strong> 
 
                                           Lenders use your credit score to determine your creditworthiness, and a higher score can help you secure a lower interest rate. Make sure your credit report is accurate and dispute any errors.
 
-                                       </li>
+                                       </div></li>
 
-                                       <li class="mb-20"><strong>Choose a shorter loan term: </strong> 
+                                       <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Choose a shorter loan term:  
+
+                                          A shorter loan term typically comes with a lower interest rate, as the lender takes on less risk." class="w-7 h-7 object-contain" /></span><div><strong>Choose a shorter loan term: </strong> 
 
                                           A shorter loan term typically comes with a lower interest rate, as the lender takes on less risk.
 
-                                       </li>
+                                       </div></li>
 
-                                       <li class="mb-20"><strong>Improve your credit score: </strong> 
+                                       <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Improve your credit score:  
+
+                                          If your credit score is low, take steps to improve it before applying for a loan. Pay your bills on time, pay down credit card debt, and avoid applying for new credit." class="w-7 h-7 object-contain" /></span><div><strong>Improve your credit score: </strong> 
 
                                           If your credit score is low, take steps to improve it before applying for a loan. Pay your bills on time, pay down credit card debt, and avoid applying for new credit.
 
-                                       </li>
+                                       </div></li>
 
                                     </ul>
 
@@ -1275,7 +1284,7 @@
 
                                        </ul>
 
-                                       <img src="img/interest-rate-formula-arrow.svg" alt="arrow" class="product-section-calc-formula__arrow" width="50px" height="29px">
+                                       <img src="/img/interest-rate-formula-arrow.svg" alt="arrow" class="product-section-calc-formula__arrow" width="50px" height="29px">
 
                                     </div>
 
@@ -1393,7 +1402,7 @@
 
                                              <span>
 
-                                             <img src="img/income.svg" width="40" height="40" alt="Income logo">
+                                             <img src="/img/income.svg" width="40" height="40" alt="Income logo">
 
                                              </span>
 
@@ -1405,7 +1414,7 @@
 
                                              <span>
 
-                                             <img src="img/credit-score.svg" width="40" height="40" alt="Credit score logo">
+                                             <img src="/img/credit-score.svg" width="40" height="40" alt="Credit score logo">
 
                                              </span>
 
@@ -1417,7 +1426,7 @@
 
                                              <span>
 
-                                             <img src="img/employment-status.svg" width="40" height="40" alt="Employment status logo">
+                                             <img src="/img/employment.svg" width="40" height="40" alt="Employment status logo">
 
                                              </span>
 
@@ -1437,7 +1446,7 @@
 
                                              <span>
 
-                                             <img src="img/credit-history.svg" width="40" height="40" alt="Credit history logo">
+                                             <img src="/img/credit-history.svg" width="40" height="40" alt="Credit history logo">
 
                                              </span>
 
@@ -1449,7 +1458,7 @@
 
                                              <span>
 
-                                             <img src="img/existing-debt.svg" width="40" height="40" alt="Existing debt logo">
+                                             <img src="/img/existing-debt.svg" width="40" height="40" alt="Existing debt logo">
 
                                              </span>
 
@@ -1461,7 +1470,7 @@
 
                                              <span>
 
-                                             <img src="img/relationship-lender.svg" width="40" height="40" alt="Relationship with the lender logo">
+                                             <img src="/img/relationship-lender.svg" width="40" height="40" alt="Relationship with the lender logo">
 
                                              </span>
 
@@ -1495,21 +1504,25 @@
 
                                     <ul>
 
-                                       <li class="mb-4">
+                                       <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Fixed Interest Rate
+
+                                          If you don't take any financial risks and prefer stability, a fixed interest rate is a choice for you. This is because the interest rate remains the same throughout the tenure. The main downside of a fixed-rate loan is that it costs a little higher than a floating interest-rate loan. If the interest rate falls due to policy changes, a fixed rate will not be affected in this scenario. As a result, the borrower will be required to pay the same predetermined amount each month. However, irrespective of a fixed or floating interest rate, you can find the best personal loans with competitive interest rates at credifycapital." class="w-7 h-7 object-contain" /></span><div>
 
                                           <h3 class="mb-0">Fixed Interest Rate</h3>
 
                                           <p>If you don't take any financial risks and prefer stability, a fixed interest rate is a choice for you. This is because the interest rate remains the same throughout the tenure. The main downside of a fixed-rate loan is that it costs a little higher than a floating interest-rate loan. If the interest rate falls due to policy changes, a fixed rate will not be affected in this scenario. As a result, the borrower will be required to pay the same predetermined amount each month. However, irrespective of a fixed or floating interest rate, you can find the best personal loans with competitive interest rates at credifycapital.</p>
 
-                                       </li>
+                                       </div></li>
 
-                                       <li>
+                                       <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Floating Interest Rate
+
+                                          Floating interest rate changes based on the financial market. This is better for those comfortable with some risk, as the interest rate can increase or decrease. If the policy changes are favourable to the customer, the interest rate is accordingly lowered, and you end up paying a lot less interest. However, there is always a risk that the policy changes are unfavourable to the customer, and the interest rate may be higher than what you initially signed up for. So, apply at credifycapital and get competitive interest rates." class="w-7 h-7 object-contain" /></span><div>
 
                                           <h3 class="mb-0">Floating Interest Rate</h3>
 
                                           <p>Floating interest rate changes based on the financial market. This is better for those comfortable with some risk, as the interest rate can increase or decrease. If the policy changes are favourable to the customer, the interest rate is accordingly lowered, and you end up paying a lot less interest. However, there is always a risk that the policy changes are unfavourable to the customer, and the interest rate may be higher than what you initially signed up for. So, apply at credifycapital and get competitive interest rates.</p>
 
-                                       </li>
+                                       </div></li>
 
                                     </ul>
 
@@ -1585,7 +1598,7 @@
 
                                           <div class="plel_box_img">
 
-                                             <img src="img/maintain-credit-score.svg" width="50" height="50" alt="Credit Score logo">
+                                             <img src="/img/maintain-credit-score.svg" width="50" height="50" alt="Credit Score logo">
 
                                           </div>
 
@@ -1597,7 +1610,7 @@
 
                                           <div class="plel_box_img">
 
-                                             <img src="img/lenders.svg" width="50" height="50" alt="Lenders logo">
+                                             <img src="/img/lenders.svg" width="50" height="50" alt="Lenders logo">
 
                                           </div>
 
@@ -1609,7 +1622,7 @@
 
                                           <div class="plel_box_img">
 
-                                             <img src="img/stable-income.svg" width="50" height="50" alt="Stable Income logo">
+                                             <img src="/img/stable-income.svg" width="50" height="50" alt="Stable Income logo">
 
                                           </div>
 
@@ -1621,7 +1634,7 @@
 
                                           <div class="plel_box_img">
 
-                                             <img src="img/tenure.svg" width="50" height="50" alt="Tenure logo">
+                                             <img src="/img/tenure.svg" width="50" height="50" alt="Tenure logo">
 
                                           </div>
 
@@ -1685,13 +1698,13 @@
 
                                              <ul>
 
-                                                <li>Maintain a high credit score</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Maintain a high credit score" class="w-7 h-7 object-contain" /></span><div>Maintain a high credit score</div></li>
 
-                                                <li>Have a good re-payment track record</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Have a good re-payment track record" class="w-7 h-7 object-contain" /></span><div>Have a good re-payment track record</div></li>
 
-                                                <li>Maintain stable income as a salaried employee</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/income.svg" width="28" height="28" alt="Maintain stable income as a salaried employee" class="w-7 h-7 object-contain" /></span><div>Maintain stable income as a salaried employee</div></li>
 
-                                                <li>Meet all the required loan eligibility criteria. </li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Meet all the required loan eligibility criteria." class="w-7 h-7 object-contain" /></span><div>Meet all the required loan eligibility criteria. </div></li>
 
                                              </ul>
 
@@ -1719,13 +1732,13 @@
 
                                              <ul>
 
-                                                <li>P = Principal amount</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="P = Principal amount" class="w-7 h-7 object-contain" /></span><div>P = Principal amount</div></li>
 
-                                                <li>r = rate of interest</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="r = rate of interest" class="w-7 h-7 object-contain" /></span><div>r = rate of interest</div></li>
 
-                                                <li>n = number of times interest is compounded every year</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="n = number of times interest is compounded every year" class="w-7 h-7 object-contain" /></span><div>n = number of times interest is compounded every year</div></li>
 
-                                                <li>t = time (in years)</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="t = time (in years)" class="w-7 h-7 object-contain" /></span><div>t = time (in years)</div></li>
 
                                              </ul>
 
@@ -1815,13 +1828,13 @@
 
                                              <ul>
 
-                                                <li>Interest represents the amount of interest charged on a loan.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Interest represents the amount of interest charged on a loan." class="w-7 h-7 object-contain" /></span><div>Interest represents the amount of interest charged on a loan.</div></li>
 
-                                                <li>Principal refers to the initial loan amount borrowed.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Principal refers to the initial loan amount borrowed." class="w-7 h-7 object-contain" /></span><div>Principal refers to the initial loan amount borrowed.</div></li>
 
-                                                <li>Rate denotes the interest rate per period (usually per year).</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Rate denotes the interest rate per period (usually per year)." class="w-7 h-7 object-contain" /></span><div>Rate denotes the interest rate per period (usually per year).</div></li>
 
-                                                <li>Time represents the duration of the loan in the same time units as the interest rate.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Time represents the duration of the loan in the same time units as the interest rate." class="w-7 h-7 object-contain" /></span><div>Time represents the duration of the loan in the same time units as the interest rate.</div></li>
 
                                              </ul>
 
@@ -1841,9 +1854,9 @@
 
                                              <ul>
 
-                                                <li>It's important to note that the interest rate can be calculated on different time periods, such as per month, per quarter, or per annum. To match the interest rate calculation with the loan tenure, the time value needs to be adjusted accordingly. For instance, if the loan duration is three years, the time value would be 3.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="It's important to note that the interest rate can be calculated on different time periods, such as per month, per quarter, or per annum. To match the interest rate calculation with the loan tenure, the time value needs to be adjusted accordingly. For instance, if the loan duration is three years, the time value would be 3." class="w-7 h-7 object-contain" /></span><div>It's important to note that the interest rate can be calculated on different time periods, such as per month, per quarter, or per annum. To match the interest rate calculation with the loan tenure, the time value needs to be adjusted accordingly. For instance, if the loan duration is three years, the time value would be 3.</div></li>
 
-                                                <li>It's also worth mentioning that lenders may use different methods to calculate interest rates, such as compound interest or reducing balance methods. These methods can impact the total interest payable and the distribution of interest over the loan tenure.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="It's also worth mentioning that lenders may use different methods to calculate interest rates, such as compound interest or reducing balance methods. These methods can impact the total interest payable and the distribution of interest over the loan tenure." class="w-7 h-7 object-contain" /></span><div>It's also worth mentioning that lenders may use different methods to calculate interest rates, such as compound interest or reducing balance methods. These methods can impact the total interest payable and the distribution of interest over the loan tenure.</div></li>
 
                                              </ul>
 
@@ -1869,17 +1882,17 @@
 
                                              <ul>
 
-                                                <li><strong>Interest Savings: </strong>One of the primary benefits of repaying a loan early is the potential to save on interest. By paying off the loan sooner, you reduce the total amount of interest you would have paid over the loan term. This can result in significant savings, especially if the interest rate on the loan is high.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Interest Savings: One of the primary benefits of repaying a loan early is the potential to save on interest. By paying off the loan sooner, you reduce the total amount of interest you would have paid over the loan term. This can result in significant savings, especially if the interest rate on the loan is high." class="w-7 h-7 object-contain" /></span><div><strong>Interest Savings: </strong>One of the primary benefits of repaying a loan early is the potential to save on interest. By paying off the loan sooner, you reduce the total amount of interest you would have paid over the loan term. This can result in significant savings, especially if the interest rate on the loan is high.</div></li>
 
-                                                <li><strong>Debt-Free Sooner: </strong>Paying off a loan early allows you to become debt-free sooner. It can provide a sense of financial freedom and relieve the burden of monthly loan payments. Being debt-free can give you more flexibility in managing your finances and pursuing other financial goals.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Debt-Free Sooner: Paying off a loan early allows you to become debt-free sooner. It can provide a sense of financial freedom and relieve the burden of monthly loan payments. Being debt-free can give you more flexibility in managing your finances and pursuing other financial goals." class="w-7 h-7 object-contain" /></span><div><strong>Debt-Free Sooner: </strong>Paying off a loan early allows you to become debt-free sooner. It can provide a sense of financial freedom and relieve the burden of monthly loan payments. Being debt-free can give you more flexibility in managing your finances and pursuing other financial goals.</div></li>
 
-                                                <li><strong>Improved Credit Score: </strong>Timely re-payment of loans is important for maintaining a good credit score. If you repay your loan early, it demonstrates responsible financial behaviour and can positively impact your credit history. A higher credit score can improve your chances of obtaining future loans at favourable terms and interest rates.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Improved Credit Score: Timely re-payment of loans is important for maintaining a good credit score. If you repay your loan early, it demonstrates responsible financial behaviour and can positively impact your credit history. A higher credit score can improve your chances of obtaining future loans at favourable terms and interest rates." class="w-7 h-7 object-contain" /></span><div><strong>Improved Credit Score: </strong>Timely re-payment of loans is important for maintaining a good credit score. If you repay your loan early, it demonstrates responsible financial behaviour and can positively impact your credit history. A higher credit score can improve your chances of obtaining future loans at favourable terms and interest rates.</div></li>
 
-                                                <li><strong>Prepayment Penalties: </strong>Before deciding to repay a Personal Loan early, it's important to check if your loan agreement includes any pre-payment penalties. Some lenders charge a fee for early re-payment to compensate for the interest they would have earned over the original loan term. Evaluate the pre-payment penalties and compare them to the potential interest savings to determine if early re-payment is financially beneficial.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/flexible-repayment-tenure.svg" width="28" height="28" alt="Prepayment Penalties: Before deciding to repay a Personal Loan early, it's important to check if your loan agreement includes any pre-payment penalties. Some lenders charge a fee for early re-payment to compensate for the interest they would have earned over the original loan term. Evaluate the pre-payment penalties and compare them to the potential interest savings to determine if early re-payment is financially beneficial." class="w-7 h-7 object-contain" /></span><div><strong>Prepayment Penalties: </strong>Before deciding to repay a Personal Loan early, it's important to check if your loan agreement includes any pre-payment penalties. Some lenders charge a fee for early re-payment to compensate for the interest they would have earned over the original loan term. Evaluate the pre-payment penalties and compare them to the potential interest savings to determine if early re-payment is financially beneficial.</div></li>
 
-                                                <li><strong>Financial Stability: </strong>Consider your overall financial stability before deciding to repay a loan early. Ensure that you have enough savings to cover emergencies and other financial obligations. It's important to have a solid financial foundation and not compromise your financial well-being by using all your resources for early loan repayment.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/flexible-repayment-tenure.svg" width="28" height="28" alt="Financial Stability: Consider your overall financial stability before deciding to repay a loan early. Ensure that you have enough savings to cover emergencies and other financial obligations. It's important to have a solid financial foundation and not compromise your financial well-being by using all your resources for early loan repayment." class="w-7 h-7 object-contain" /></span><div><strong>Financial Stability: </strong>Consider your overall financial stability before deciding to repay a loan early. Ensure that you have enough savings to cover emergencies and other financial obligations. It's important to have a solid financial foundation and not compromise your financial well-being by using all your resources for early loan repayment.</div></li>
 
-                                                <li><strong>Other Financial Goals: </strong>Assess your other financial goals and priorities. Suppose you have other high-interest debts or important financial milestones, such as saving for a down payment on a house or investing in retirement. In that case, it may be more beneficial to allocate your resources towards those goals rather than paying off your loan early.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Other Financial Goals: Assess your other financial goals and priorities. Suppose you have other high-interest debts or important financial milestones, such as saving for a down payment on a house or investing in retirement. In that case, it may be more beneficial to allocate your resources towards those goals rather than paying off your loan early." class="w-7 h-7 object-contain" /></span><div><strong>Other Financial Goals: </strong>Assess your other financial goals and priorities. Suppose you have other high-interest debts or important financial milestones, such as saving for a down payment on a house or investing in retirement. In that case, it may be more beneficial to allocate your resources towards those goals rather than paying off your loan early.</div></li>
 
                                              </ul>
 
@@ -1923,13 +1936,13 @@
 
                                              <ul>
 
-                                                <li><strong>Interest Savings: </strong>By closing a loan early, you can save on the interest that would have been charged over the remaining loan tenure. This can result in significant savings, especially if the loan carries a high-interest rate. Early repayment can help reduce the overall cost of borrowing.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Interest Savings: By closing a loan early, you can save on the interest that would have been charged over the remaining loan tenure. This can result in significant savings, especially if the loan carries a high-interest rate. Early repayment can help reduce the overall cost of borrowing." class="w-7 h-7 object-contain" /></span><div><strong>Interest Savings: </strong>By closing a loan early, you can save on the interest that would have been charged over the remaining loan tenure. This can result in significant savings, especially if the loan carries a high-interest rate. Early repayment can help reduce the overall cost of borrowing.</div></li>
 
-                                                <li><strong>Prepayment Penalties: </strong>Some lenders may charge a pre-payment penalty for closing a loan before the agreed-upon tenure. The pre-payment penalty is usually a percentage of the outstanding loan amount and is intended to compensate the lender for the interest they would have earned if the loan had been repaid as per the original schedule. It is important to check your loan agreement or consult with the lender to understand if there are any penalties associated with early repayment.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/flexible-repayment-tenure.svg" width="28" height="28" alt="Prepayment Penalties: Some lenders may charge a pre-payment penalty for closing a loan before the agreed-upon tenure. The pre-payment penalty is usually a percentage of the outstanding loan amount and is intended to compensate the lender for the interest they would have earned if the loan had been repaid as per the original schedule. It is important to check your loan agreement or consult with the lender to understand if there are any penalties associated with early repayment." class="w-7 h-7 object-contain" /></span><div><strong>Prepayment Penalties: </strong>Some lenders may charge a pre-payment penalty for closing a loan before the agreed-upon tenure. The pre-payment penalty is usually a percentage of the outstanding loan amount and is intended to compensate the lender for the interest they would have earned if the loan had been repaid as per the original schedule. It is important to check your loan agreement or consult with the lender to understand if there are any penalties associated with early repayment.</div></li>
 
-                                                <li><strong>Improved Credit Score: </strong>Timely re-payment of loans is important for maintaining a good credit score. If you close your loan early by making full re-payment, it demonstrates responsible financial behaviour and can have a positive impact on your credit history. A good credit score can enhance your future borrowing capacity and help you obtain better loan terms.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Improved Credit Score: Timely re-payment of loans is important for maintaining a good credit score. If you close your loan early by making full re-payment, it demonstrates responsible financial behaviour and can have a positive impact on your credit history. A good credit score can enhance your future borrowing capacity and help you obtain better loan terms." class="w-7 h-7 object-contain" /></span><div><strong>Improved Credit Score: </strong>Timely re-payment of loans is important for maintaining a good credit score. If you close your loan early by making full re-payment, it demonstrates responsible financial behaviour and can have a positive impact on your credit history. A good credit score can enhance your future borrowing capacity and help you obtain better loan terms.</div></li>
 
-                                                <li><strong>Financial Stability: </strong>Before closing a loan early, ensure you have enough funds to make the full re-payment without compromising your financial stability. Consider your other financial obligations, emergency savings, and future financial goals. Closing a loan early should not put you in a financially vulnerable position.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/medical-emergencies.svg" width="28" height="28" alt="Financial Stability: Before closing a loan early, ensure you have enough funds to make the full re-payment without compromising your financial stability. Consider your other financial obligations, emergency savings, and future financial goals. Closing a loan early should not put you in a financially vulnerable position." class="w-7 h-7 object-contain" /></span><div><strong>Financial Stability: </strong>Before closing a loan early, ensure you have enough funds to make the full re-payment without compromising your financial stability. Consider your other financial obligations, emergency savings, and future financial goals. Closing a loan early should not put you in a financially vulnerable position.</div></li>
 
                                              </ul>
 
@@ -1951,13 +1964,13 @@
 
                                              <ul>
 
-                                                <li><strong>Prepayment Charges: </strong>Some lenders may charge a pre-payment penalty for repaying the loan before the scheduled tenure. This penalty is typically a percentage of the outstanding loan amount and is intended to compensate the lender for the interest they would have earned if the loan had been repaid as per the original schedule. Check your loan agreement or consult with the lender to understand if any pre-payment charges apply.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/flexible-repayment-tenure.svg" width="28" height="28" alt="Prepayment Charges: Some lenders may charge a pre-payment penalty for repaying the loan before the scheduled tenure. This penalty is typically a percentage of the outstanding loan amount and is intended to compensate the lender for the interest they would have earned if the loan had been repaid as per the original schedule. Check your loan agreement or consult with the lender to understand if any pre-payment charges apply." class="w-7 h-7 object-contain" /></span><div><strong>Prepayment Charges: </strong>Some lenders may charge a pre-payment penalty for repaying the loan before the scheduled tenure. This penalty is typically a percentage of the outstanding loan amount and is intended to compensate the lender for the interest they would have earned if the loan had been repaid as per the original schedule. Check your loan agreement or consult with the lender to understand if any pre-payment charges apply.</div></li>
 
-                                                <li><strong>Interest Savings: </strong>By paying off the entire loan amount in advance, you eliminate future interest payments. This can result in significant interest savings, especially if the loan has a long tenure or carries a high interest rate. By closing the loan early, you can reduce the overall interest paid over the loan term.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Interest Savings: By paying off the entire loan amount in advance, you eliminate future interest payments. This can result in significant interest savings, especially if the loan has a long tenure or carries a high interest rate. By closing the loan early, you can reduce the overall interest paid over the loan term." class="w-7 h-7 object-contain" /></span><div><strong>Interest Savings: </strong>By paying off the entire loan amount in advance, you eliminate future interest payments. This can result in significant interest savings, especially if the loan has a long tenure or carries a high interest rate. By closing the loan early, you can reduce the overall interest paid over the loan term.</div></li>
 
-                                                <li><strong>Financial Impact: </strong>Consider your overall financial situation before making a full pre-payment. Evaluate the impact of paying off the loan on your cash flow and financial goals. Ensure that you have sufficient funds to pay off the loan without compromising your financial stability or neglecting other financial obligations.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Financial Impact: Consider your overall financial situation before making a full pre-payment. Evaluate the impact of paying off the loan on your cash flow and financial goals. Ensure that you have sufficient funds to pay off the loan without compromising your financial stability or neglecting other financial obligations." class="w-7 h-7 object-contain" /></span><div><strong>Financial Impact: </strong>Consider your overall financial situation before making a full pre-payment. Evaluate the impact of paying off the loan on your cash flow and financial goals. Ensure that you have sufficient funds to pay off the loan without compromising your financial stability or neglecting other financial obligations.</div></li>
 
-                                                <li><strong>Communication with the Lender:  </strong>If you decide to pay the full loan amount in advance, inform the lender in advance. They can provide you with the necessary instructions and assist you with the loan closure process. Ensure you obtain a formal closure statement or No Objection Certificate (NOC) from the lender once the loan is fully repaid.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Communication with the Lender:  If you decide to pay the full loan amount in advance, inform the lender in advance. They can provide you with the necessary instructions and assist you with the loan closure process. Ensure you obtain a formal closure statement or No Objection Certificate (NOC) from the lender once the loan is fully repaid." class="w-7 h-7 object-contain" /></span><div><strong>Communication with the Lender:  </strong>If you decide to pay the full loan amount in advance, inform the lender in advance. They can provide you with the necessary instructions and assist you with the loan closure process. Ensure you obtain a formal closure statement or No Objection Certificate (NOC) from the lender once the loan is fully repaid.</div></li>
 
                                              </ul>
 
@@ -1983,15 +1996,15 @@
 
                                              <ul>
 
-                                                <li><strong>Calculation:</strong> Gap interest is calculated based on the disbursed loan amount and the applicable interest rate. It is typically calculated daily or monthly for the period between the loan disbursal and the first EMI payment.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Calculation: Gap interest is calculated based on the disbursed loan amount and the applicable interest rate. It is typically calculated daily or monthly for the period between the loan disbursal and the first EMI payment." class="w-7 h-7 object-contain" /></span><div><strong>Calculation:</strong> Gap interest is calculated based on the disbursed loan amount and the applicable interest rate. It is typically calculated daily or monthly for the period between the loan disbursal and the first EMI payment.</div></li>
 
-                                                <li><strong>Purpose:</strong> The purpose of gap interest is to compensate the lender for the time during which the borrower has access to the loan funds without making any re-payments. It ensures that the lender does not incur a loss or opportunity cost during this initial period.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/documents-table-arrow.svg" width="28" height="28" alt="Purpose: The purpose of gap interest is to compensate the lender for the time during which the borrower has access to the loan funds without making any re-payments. It ensures that the lender does not incur a loss or opportunity cost during this initial period." class="w-7 h-7 object-contain" /></span><div><strong>Purpose:</strong> The purpose of gap interest is to compensate the lender for the time during which the borrower has access to the loan funds without making any re-payments. It ensures that the lender does not incur a loss or opportunity cost during this initial period.</div></li>
 
-                                                <li><strong>Loan Disbursal and EMI Commencement:</strong> After the Personal Loan is approved and disbursed, there is usually a gap period before the EMIs start. The gap period varies among lenders and can range from a few days to a couple of months, depending on the loan agreement.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/instant-disbursal.svg" width="28" height="28" alt="Loan Disbursal and EMI Commencement: After the Personal Loan is approved and disbursed, there is usually a gap period before the EMIs start. The gap period varies among lenders and can range from a few days to a couple of months, depending on the loan agreement." class="w-7 h-7 object-contain" /></span><div><strong>Loan Disbursal and EMI Commencement:</strong> After the Personal Loan is approved and disbursed, there is usually a gap period before the EMIs start. The gap period varies among lenders and can range from a few days to a couple of months, depending on the loan agreement.</div></li>
 
-                                                <li><strong>Inclusion in Loan Repayment Schedule:</strong> The gap interest is typically added to the loan principal, and the total amount (including the principal and gap interest) is divided into EMIs over the loan tenure. This means that the borrower repays both the loan principal and the accrued gap interest through the regular EMIs.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/flexible-repayment-tenure.svg" width="28" height="28" alt="Inclusion in Loan Repayment Schedule: The gap interest is typically added to the loan principal, and the total amount (including the principal and gap interest) is divided into EMIs over the loan tenure. This means that the borrower repays both the loan principal and the accrued gap interest through the regular EMIs." class="w-7 h-7 object-contain" /></span><div><strong>Inclusion in Loan Repayment Schedule:</strong> The gap interest is typically added to the loan principal, and the total amount (including the principal and gap interest) is divided into EMIs over the loan tenure. This means that the borrower repays both the loan principal and the accrued gap interest through the regular EMIs.</div></li>
 
-                                                <li><strong>Impact on Loan Repayment:</strong> Gap interest increases the overall cost of the loan since the borrower is liable to pay interest for the period before the regular EMIs commence. It's important to factor in the gap interest while calculating the total re-payment amount and assessing the affordability of the loan.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/flexible-repayment-tenure.svg" width="28" height="28" alt="Impact on Loan Repayment: Gap interest increases the overall cost of the loan since the borrower is liable to pay interest for the period before the regular EMIs commence. It's important to factor in the gap interest while calculating the total re-payment amount and assessing the affordability of the loan." class="w-7 h-7 object-contain" /></span><div><strong>Impact on Loan Repayment:</strong> Gap interest increases the overall cost of the loan since the borrower is liable to pay interest for the period before the regular EMIs commence. It's important to factor in the gap interest while calculating the total re-payment amount and assessing the affordability of the loan.</div></li>
 
                                              </ul>
 
@@ -2013,19 +2026,19 @@
 
                                              <ul>
 
-                                                <li><strong>Loan Amount: </strong>The loan amount for a 5-year loan can vary depending on the lender and your eligibility criteria. The loan amount is determined based on factors such as your income, credit score, re-payment capacity, and the lender's policies.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/income.svg" width="28" height="28" alt="Loan Amount: The loan amount for a 5-year loan can vary depending on the lender and your eligibility criteria. The loan amount is determined based on factors such as your income, credit score, re-payment capacity, and the lender's policies." class="w-7 h-7 object-contain" /></span><div><strong>Loan Amount: </strong>The loan amount for a 5-year loan can vary depending on the lender and your eligibility criteria. The loan amount is determined based on factors such as your income, credit score, re-payment capacity, and the lender's policies.</div></li>
 
-                                                <li><strong>Interest Rate: </strong>The interest rate for a 5-year loan can vary among lenders. The rate is usually determined based on factors such as your creditworthiness, loan amount, and the prevailing market rates. A higher credit score and a good re-payment history can help you secure an attractive interest rate.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Interest Rate: The interest rate for a 5-year loan can vary among lenders. The rate is usually determined based on factors such as your creditworthiness, loan amount, and the prevailing market rates. A higher credit score and a good re-payment history can help you secure an attractive interest rate." class="w-7 h-7 object-contain" /></span><div><strong>Interest Rate: </strong>The interest rate for a 5-year loan can vary among lenders. The rate is usually determined based on factors such as your creditworthiness, loan amount, and the prevailing market rates. A higher credit score and a good re-payment history can help you secure an attractive interest rate.</div></li>
 
-                                                <li><strong>Monthly Installments: </strong>With a 5-year loan, you will be required to make fixed monthly payments, known as Equated Monthly Installments (EMIs), over the loan tenure. The EMI is calculated based on the interest rate, loan amount, and loan tenure. It's important to budget and ensure that you can comfortably afford to pay the monthly instalments.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Monthly Installments: With a 5-year loan, you will be required to make fixed monthly payments, known as Equated Monthly Installments (EMIs), over the loan tenure. The EMI is calculated based on the interest rate, loan amount, and loan tenure. It's important to budget and ensure that you can comfortably afford to pay the monthly instalments." class="w-7 h-7 object-contain" /></span><div><strong>Monthly Installments: </strong>With a 5-year loan, you will be required to make fixed monthly payments, known as Equated Monthly Installments (EMIs), over the loan tenure. The EMI is calculated based on the interest rate, loan amount, and loan tenure. It's important to budget and ensure that you can comfortably afford to pay the monthly instalments.</div></li>
 
-                                                <li><strong>Eligibility Criteria: </strong>Lenders have specific eligibility criteria that you need to meet to qualify for a 5-year loan. These may include factors such as your age, income, employment stability, credit score, and existing financial obligations. Meeting these eligibility criteria increases your chances of loan approval.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/employment.svg" width="28" height="28" alt="Eligibility Criteria: Lenders have specific eligibility criteria that you need to meet to qualify for a 5-year loan. These may include factors such as your age, income, employment stability, credit score, and existing financial obligations. Meeting these eligibility criteria increases your chances of loan approval." class="w-7 h-7 object-contain" /></span><div><strong>Eligibility Criteria: </strong>Lenders have specific eligibility criteria that you need to meet to qualify for a 5-year loan. These may include factors such as your age, income, employment stability, credit score, and existing financial obligations. Meeting these eligibility criteria increases your chances of loan approval.</div></li>
 
-                                                <li><strong>Purpose of the Loan: </strong>A 5-year loan can be used for various purposes, such as funding home renovations, wedding expenses, education expenses, debt consolidation, or any other personal financial needs. It's important to clarify the purpose of the loan to the lender during the application process.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/financing-education.svg" width="28" height="28" alt="Purpose of the Loan: A 5-year loan can be used for various purposes, such as funding home renovations, wedding expenses, education expenses, debt consolidation, or any other personal financial needs. It's important to clarify the purpose of the loan to the lender during the application process." class="w-7 h-7 object-contain" /></span><div><strong>Purpose of the Loan: </strong>A 5-year loan can be used for various purposes, such as funding home renovations, wedding expenses, education expenses, debt consolidation, or any other personal financial needs. It's important to clarify the purpose of the loan to the lender during the application process.</div></li>
 
-                                                <li><strong>Prepayment and Foreclosure: </strong>Some lenders allow borrowers to make prepayments toward the loan before the completion of the tenure. Prepayment options may come with certain terms and conditions, including prepayment charges. It's advisable to inquire about prepayment options and associated charges from the lender before availing of the loan.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/flexible-repayment-tenure.svg" width="28" height="28" alt="Prepayment and Foreclosure: Some lenders allow borrowers to make prepayments toward the loan before the completion of the tenure. Prepayment options may come with certain terms and conditions, including prepayment charges. It's advisable to inquire about prepayment options and associated charges from the lender before availing of the loan." class="w-7 h-7 object-contain" /></span><div><strong>Prepayment and Foreclosure: </strong>Some lenders allow borrowers to make prepayments toward the loan before the completion of the tenure. Prepayment options may come with certain terms and conditions, including prepayment charges. It's advisable to inquire about prepayment options and associated charges from the lender before availing of the loan.</div></li>
 
-                                                <li><strong>Documentation: </strong>To apply for a 5-year loan, you will be required to submit certain documents such as identity proof, address proof, income proof, bank statements, and employment details. The specific documentation requirements may vary among lenders.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/employment.svg" width="28" height="28" alt="Documentation: To apply for a 5-year loan, you will be required to submit certain documents such as identity proof, address proof, income proof, bank statements, and employment details. The specific documentation requirements may vary among lenders." class="w-7 h-7 object-contain" /></span><div><strong>Documentation: </strong>To apply for a 5-year loan, you will be required to submit certain documents such as identity proof, address proof, income proof, bank statements, and employment details. The specific documentation requirements may vary among lenders.</div></li>
 
                                              </ul>
 
@@ -2047,19 +2060,19 @@
 
                                              <ul>
 
-                                                <li><strong>Loan Amount : </strong>The loan amount for a 24-month loan can vary depending on the lender and your eligibility criteria. It is determined based on factors such as your income, credit score, re-payment capacity, and the lender's policies.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/income.svg" width="28" height="28" alt="Loan Amount : The loan amount for a 24-month loan can vary depending on the lender and your eligibility criteria. It is determined based on factors such as your income, credit score, re-payment capacity, and the lender's policies." class="w-7 h-7 object-contain" /></span><div><strong>Loan Amount : </strong>The loan amount for a 24-month loan can vary depending on the lender and your eligibility criteria. It is determined based on factors such as your income, credit score, re-payment capacity, and the lender's policies.</div></li>
 
-                                                <li><strong>Interest Rate: </strong>The interest rate for a 2-year loan can vary among lenders. The rate is usually determined based on factors such as your creditworthiness, loan amount, and the prevailing market rates. A higher credit score and a good re-payment history can help you secure a lower interest rate.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Interest Rate: The interest rate for a 2-year loan can vary among lenders. The rate is usually determined based on factors such as your creditworthiness, loan amount, and the prevailing market rates. A higher credit score and a good re-payment history can help you secure a lower interest rate." class="w-7 h-7 object-contain" /></span><div><strong>Interest Rate: </strong>The interest rate for a 2-year loan can vary among lenders. The rate is usually determined based on factors such as your creditworthiness, loan amount, and the prevailing market rates. A higher credit score and a good re-payment history can help you secure a lower interest rate.</div></li>
 
-                                                <li><strong>Monthly Installments: </strong>With a 2-year loan, you will be required to make fixed monthly payments, known as Equated Monthly Installments (EMIs), over the loan tenure. The EMI is calculated on the basis of interest rate, loan amount, and loan tenure. It's important to budget and ensure that you can comfortably afford the monthly instalments.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Monthly Installments: With a 2-year loan, you will be required to make fixed monthly payments, known as Equated Monthly Installments (EMIs), over the loan tenure. The EMI is calculated on the basis of interest rate, loan amount, and loan tenure. It's important to budget and ensure that you can comfortably afford the monthly instalments." class="w-7 h-7 object-contain" /></span><div><strong>Monthly Installments: </strong>With a 2-year loan, you will be required to make fixed monthly payments, known as Equated Monthly Installments (EMIs), over the loan tenure. The EMI is calculated on the basis of interest rate, loan amount, and loan tenure. It's important to budget and ensure that you can comfortably afford the monthly instalments.</div></li>
 
-                                                <li><strong>Eligibility Criteria: </strong>Lenders have specific eligibility criteria that you need to meet to qualify for a 2-year loan. This may include factors such as age, income, employment stability, credit score, and existing financial obligations. Meeting these criteria increases your chances for a loan approval.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/employment.svg" width="28" height="28" alt="Eligibility Criteria: Lenders have specific eligibility criteria that you need to meet to qualify for a 2-year loan. This may include factors such as age, income, employment stability, credit score, and existing financial obligations. Meeting these criteria increases your chances for a loan approval." class="w-7 h-7 object-contain" /></span><div><strong>Eligibility Criteria: </strong>Lenders have specific eligibility criteria that you need to meet to qualify for a 2-year loan. This may include factors such as age, income, employment stability, credit score, and existing financial obligations. Meeting these criteria increases your chances for a loan approval.</div></li>
 
-                                                <li><strong>Purpose of the Loan: </strong>A 2-year Personal Loan can be used for various purposes, such as funding weddings, medical expenses, travel expenses, debt consolidation, or any other personal financial needs. It's important to clarify the purpose of the loan to the lender during the application process.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/wedding-celebrations.svg" width="28" height="28" alt="Purpose of the Loan: A 2-year Personal Loan can be used for various purposes, such as funding weddings, medical expenses, travel expenses, debt consolidation, or any other personal financial needs. It's important to clarify the purpose of the loan to the lender during the application process." class="w-7 h-7 object-contain" /></span><div><strong>Purpose of the Loan: </strong>A 2-year Personal Loan can be used for various purposes, such as funding weddings, medical expenses, travel expenses, debt consolidation, or any other personal financial needs. It's important to clarify the purpose of the loan to the lender during the application process.</div></li>
 
-                                                <li><strong>Prepayment and Foreclosure: </strong>Some lenders allow borrowers to make prepayments towards the loan before the completion of the tenure. Prepayment options may come with certain terms and conditions, including prepayment charges. It's advisable to inquire about prepayment options and associated charges from the lender before availing of the loan.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/flexible-repayment-tenure.svg" width="28" height="28" alt="Prepayment and Foreclosure: Some lenders allow borrowers to make prepayments towards the loan before the completion of the tenure. Prepayment options may come with certain terms and conditions, including prepayment charges. It's advisable to inquire about prepayment options and associated charges from the lender before availing of the loan." class="w-7 h-7 object-contain" /></span><div><strong>Prepayment and Foreclosure: </strong>Some lenders allow borrowers to make prepayments towards the loan before the completion of the tenure. Prepayment options may come with certain terms and conditions, including prepayment charges. It's advisable to inquire about prepayment options and associated charges from the lender before availing of the loan.</div></li>
 
-                                                <li><strong>Documentation: </strong>To apply for a 2-year loan, you will be required to submit certain documents such as KYC documents, address proof, income proof, bank statements, and employment details. Please note that the specific documentation requirements may vary among lenders.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/employment.svg" width="28" height="28" alt="Documentation: To apply for a 2-year loan, you will be required to submit certain documents such as KYC documents, address proof, income proof, bank statements, and employment details. Please note that the specific documentation requirements may vary among lenders." class="w-7 h-7 object-contain" /></span><div><strong>Documentation: </strong>To apply for a 2-year loan, you will be required to submit certain documents such as KYC documents, address proof, income proof, bank statements, and employment details. Please note that the specific documentation requirements may vary among lenders.</div></li>
 
                                              </ul>
 
@@ -2081,19 +2094,21 @@
 
                                              <ul>
 
-                                                <li><strong>Loan Amount: </strong>The loan amount for an 18-month loan can vary depending on the lender and your eligibility criteria. It is determined based on factors such as your age, income, credit score, re-payment capacity, and the lender's policies./li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Loan Amount: The loan amount for an 18-month loan can vary depending on the lender and your eligibility criteria. It is determined based on factors such as your age, income, credit score, re-payment capacity, and the lender's policies./li>
 
-                                                <li><strong>Interest Rate: </strong>The interest rate for a 1.5-year Personal Loan can vary among lenders. The rate is usually determined based on factors such as your creditworthiness, loan amount, and prevailing market rates. A higher credit score and a good re-payment history can help you secure a lower interest rate.</li>
+                                                Interest Rate: The interest rate for a 1.5-year Personal Loan can vary among lenders. The rate is usually determined based on factors such as your creditworthiness, loan amount, and prevailing market rates. A higher credit score and a good re-payment history can help you secure a lower interest rate." class="w-7 h-7 object-contain" /></span><div><strong>Loan Amount: </strong>The loan amount for an 18-month loan can vary depending on the lender and your eligibility criteria. It is determined based on factors such as your age, income, credit score, re-payment capacity, and the lender's policies./li>
 
-                                                <li><strong>Monthly Installments: </strong>You'll need to make fixed monthly payments (EMIs) calculated based on the loan amount, loan tenure, and interest rate. Ensure you can comfortably afford the instalments.</li>
+                                                <li><strong>Interest Rate: </strong>The interest rate for a 1.5-year Personal Loan can vary among lenders. The rate is usually determined based on factors such as your creditworthiness, loan amount, and prevailing market rates. A higher credit score and a good re-payment history can help you secure a lower interest rate.</div></li>
 
-                                                <li><strong>Eligibility Criteria: </strong>Lenders have specific criteria, including age, income, employment stability, credit score, and financial obligations. Meeting these criteria increases your chances for a loan approval.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/competitive-interest-rate-charges.svg" width="28" height="28" alt="Monthly Installments: You'll need to make fixed monthly payments (EMIs) calculated based on the loan amount, loan tenure, and interest rate. Ensure you can comfortably afford the instalments." class="w-7 h-7 object-contain" /></span><div><strong>Monthly Installments: </strong>You'll need to make fixed monthly payments (EMIs) calculated based on the loan amount, loan tenure, and interest rate. Ensure you can comfortably afford the instalments.</div></li>
 
-                                                <li><strong>Purpose of the Loan: </strong>A 1.5-year loan can be used for various purposes, such as funding short-term financial needs, paying off high-interest credit card debt, financing a wedding, or any other immediate financial requirement. It's important to clarify the purpose of the loan to the lender during the application process.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/employment.svg" width="28" height="28" alt="Eligibility Criteria: Lenders have specific criteria, including age, income, employment stability, credit score, and financial obligations. Meeting these criteria increases your chances for a loan approval." class="w-7 h-7 object-contain" /></span><div><strong>Eligibility Criteria: </strong>Lenders have specific criteria, including age, income, employment stability, credit score, and financial obligations. Meeting these criteria increases your chances for a loan approval.</div></li>
 
-                                                <li><strong>Prepayment and Foreclosure: </strong>Some lenders allow prepayment with certain terms and conditions, including charges. Inquire about prepayment options and charges before taking out the loan.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/wedding-celebrations.svg" width="28" height="28" alt="Purpose of the Loan: A 1.5-year loan can be used for various purposes, such as funding short-term financial needs, paying off high-interest credit card debt, financing a wedding, or any other immediate financial requirement. It's important to clarify the purpose of the loan to the lender during the application process." class="w-7 h-7 object-contain" /></span><div><strong>Purpose of the Loan: </strong>A 1.5-year loan can be used for various purposes, such as funding short-term financial needs, paying off high-interest credit card debt, financing a wedding, or any other immediate financial requirement. It's important to clarify the purpose of the loan to the lender during the application process.</div></li>
 
-                                                <li><strong>Documentation: </strong>To apply for a 1.5-year Personal Loan, you'll need to provide KYC documents, address proof, income proof, bank statements, and employment details. Please note that specific requirements may differ among lenders.</li>
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/flexible-repayment-tenure.svg" width="28" height="28" alt="Prepayment and Foreclosure: Some lenders allow prepayment with certain terms and conditions, including charges. Inquire about prepayment options and charges before taking out the loan." class="w-7 h-7 object-contain" /></span><div><strong>Prepayment and Foreclosure: </strong>Some lenders allow prepayment with certain terms and conditions, including charges. Inquire about prepayment options and charges before taking out the loan.</div></li>
+
+                                                <li class="flex items-start gap-3 my-2"><span class="flex-shrink-0 mt-1"><img src="/img/employment.svg" width="28" height="28" alt="Documentation: To apply for a 1.5-year Personal Loan, you'll need to provide KYC documents, address proof, income proof, bank statements, and employment details. Please note that specific requirements may differ among lenders." class="w-7 h-7 object-contain" /></span><div><strong>Documentation: </strong>To apply for a 1.5-year Personal Loan, you'll need to provide KYC documents, address proof, income proof, bank statements, and employment details. Please note that specific requirements may differ among lenders.</div></li>
 
                                              </ul>
 
@@ -2113,7 +2128,6 @@
 
                         </div>-->
 
-                     
                      </div>
                   </div>
                </div>
@@ -2131,7 +2145,7 @@
 
             <a href="apply.html" class="d-block mb-2 quick-desktop">
 
-            <img src="img/icon_quickapply.svg" alt="Contact Us logo" width="40" height="40">
+            <img src="/img/icon_quickapply.svg" alt="Contact Us logo" width="40" height="40">
 
             <span>Quick Apply</span>
 
@@ -2139,7 +2153,7 @@
 
             <a href="https://api.whatsapp.com/send?phone=919999406707" target="_blank" rel="noopener noreferrer" class="d-block whatsapp-ql">
 
-            <img src="img/whatsapp-ql.svg" alt="Whatsapp logo" width="40" height="40">
+            <img src="/img/whatsapp-ql.svg" alt="Whatsapp logo" width="40" height="40">
 
             <span>Connect on WhatsApp</span>
 
@@ -2153,7 +2167,7 @@
 
                <a href="apply.html" class="alignmidd hide_desktop" id=" ">
 
-                  <img src="img/icon_applynow.svg" class="applynowimg" alt="Apply Now logo" width="20" height="20"> 
+                  <img src="/img/icon_applynow.svg" class="applynowimg" alt="Apply Now logo" width="20" height="20"> 
 
                   <h6 class="applytext">Apply Now</h6>
 
@@ -2165,7 +2179,7 @@
 
                <a href="https://api.whatsapp.com/send?phone=919999406707" target="_blank" class="mlr10" id=" ">
 
-                  <img src="img/whatsapp-ql.svg" class="whatsappimg" alt="whatsapp logo" width="20" height="20"> 
+                  <img src="/img/whatsapp-ql.svg" class="whatsappimg" alt="whatsapp logo" width="20" height="20"> 
 
                   <h6 class="whatstext">Connect on <br> WhatsApp </h6>
 
@@ -2177,7 +2191,7 @@
 
       </div>
 
-      <!--<script defer src="js/action_callback.js"></script>-->
+      <!--<script defer src="/js/action_callback.js"></script>-->
 
       <script defer=""></script>
 
@@ -2185,19 +2199,17 @@
 
       <input type="hidden" id="session_lsq_status" value="1">
 
-      <link rel="stylesheet" href="css/plugins/responsive.css">
+      <link rel="stylesheet" href="/css/plugins/responsive.css">
 
-      <link rel="stylesheet" href="css/subscribe.css">
+      <link rel="stylesheet" href="/css/subscribe.css">
 
-      <link rel="stylesheet" href="css/cookiealert.css">
-
-      <link rel="stylesheet" href="css/header-footer.css">
+      <link rel="stylesheet" href="/css/cookiealert.css">
 
       <a href="javascript:" class="back-to-top" id="back-to-top"><i class="fa fa-arrow-up"></i> </a>
 
       <!-- new design callback start from here -->
 
-      <a href="" class="chatbot mbldisplaynone" id="custom-ym-chat-iconn"><img src="img/lets-chat.svg" width="150" height="150" alt="Poonawalla Fincorp Website Chatbot"></a>
+      <a href="" class="chatbot mbldisplaynone" id="custom-ym-chat-iconn"><img src="/img/lets-chat.svg" width="150" height="150" alt="Poonawalla Fincorp Website Chatbot"></a>
 
       <div id="feedback-form" class="feedback-form">
 
@@ -2209,7 +2221,7 @@
 
                <a href="" class=" apply-btn alignmidd" id="custom-ym-chat-icon-mobile">
 
-                  <img src="img/lets-chat-mobile.svg" class="letschatimg" alt="lets chat logo" width="20" height="20"> 
+                  <img src="/img/lets-chat-mobile.svg" class="letschatimg" alt="lets chat logo" width="20" height="20"> 
 
                   <h6 class="letschattext">Let's Chat</h6>
 
@@ -2219,8 +2231,6 @@
 
          </div>
 
-      
-
       <script type="text/javascript"> </script>
 
       <script defer=""></script>
@@ -2229,11 +2239,9 @@
 
       <input type="hidden" id="session_lsq_status" value="1">
 
-      <link rel="stylesheet" href="css/plugins/responsive.css">
+      <link rel="stylesheet" href="/css/plugins/responsive.css">
 
-      <link rel="stylesheet" href="css/subscribe.css">
-
-      <link rel="stylesheet" href="css/header-footer.css">
+      <link rel="stylesheet" href="/css/subscribe.css">
 
       <a href="javascript:" class="back-to-top" id="back-to-top"><i class="fa fa-arrow-up"></i> </a>
 
@@ -2245,19 +2253,15 @@
 
       <!-- jQuery -->
 
-      
+      <script src="/js/scrollIt.min.js" defer=""></script>
 
-      
+      <script src="/js/cookiealert.js" defer=""></script>
 
-      <script src="js/scrollIt.min.js" defer=""></script>
-
-      <script src="js/cookiealert.js" defer=""></script>
-
-      <script src="js/animated.headline.js" defer=""></script>
+      <script src="/js/animated.headline.js" defer=""></script>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
 
-      <script src="js/scripts.js" defer=""></script>
+      <script src="/js/scripts.js" defer=""></script>
 
      <script>
 
@@ -2332,8 +2336,6 @@ $(document).ready(function(){
 });
 
 </script>
-
-
 
       <script>
 
@@ -2541,8 +2543,9 @@ $('.awdcarausel .owl-carousel').owlCarousel({
 <footer class="bg-primary text-white border-t border-outline-variant/20 pt-12 pb-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         <div class="space-y-4">
-            <p class="text-lg font-bold">Credify<span class="text-secondary">Capital</span></p>
-            <p class="text-xs text-white/80 leading-relaxed">Smart Solutions. Fastest Approvals.</p>
+            <a href="index.html" class="inline-block group mb-4">
+        <img src="/img/credify-clean-logo.png" alt="Credify Capital Logo" class="h-14 md:h-20 w-auto object-contain bg-white px-3.5 py-2.5 rounded-2xl transition-transform duration-300 group-hover:scale-105 shadow-md" />
+      </a><p class="text-xs text-white/80 leading-relaxed">Smart Solutions. Fastest Approvals.</p>
         </div>
         <div>
             <p class="text-xs font-bold uppercase tracking-wider text-secondary mb-3">Our Frameworks</p>
@@ -2575,49 +2578,44 @@ $('.awdcarausel .owl-carousel').owlCarousel({
     </div>
 </footer>
 <!-- END FOOTER -->
-<script defer="" src="js/jquery.validate.js"></script>
-<script defer="" src="js/additional-methods.js"></script>
-
-
-      
+<script defer="" src="/js/jquery.validate.js"></script>
+<script defer="" src="/js/additional-methods.js"></script>
 
       <script></script>
 
       <!-- jQuery -->
 
-      
-
       <!-- bootstrap -->
 
-      <script src="js/bootstrap.min.js"></script>
+      <script src="/js/bootstrap.min.js"></script>
 
       <!-- scrollIt -->
 
-      <script src="js/scrollIt.min.js"></script>
+      <script src="/js/scrollIt.min.js"></script>
 
       <!-- owl carousel -->
 
-      <script src="js/owl.carousel.min.js"></script>
+      <script src="/js/owl.carousel.min.js"></script>
 
       <!-- isotope.pkgd.min js -->
 
-      <script src="js/jspdf.min.js"></script>
+      <script src="/js/jspdf.min.js"></script>
 
-      <script src="js/jspdf.plugin.autotable.min.js"></script> 
+      <script src="/js/jspdf.plugin.autotable.min.js"></script> 
 
       <!-- custom scripts -->
 
-      <script src="js/scripts.js"></script>
+      <script src="/js/scripts.js"></script>
 
       <!-- emi scripts -->
 
-      <script src="js/jspdf.min.js"></script>
+      <script src="/js/jspdf.min.js"></script>
 
-      <script src="js/jspdf.plugin.autotable.min.js"></script>
+      <script src="/js/jspdf.plugin.autotable.min.js"></script>
 
-      <script type="text/javascript" src="js/emi_pl.js"></script>
+      <script type="text/javascript" src="/js/emi_pl.js"></script>
 
-      <script type="text/javascript" src="js/new-acco.js"></script>
+      <script type="text/javascript" src="/js/new-acco.js"></script>
 
       <!-- owl scripts -->
 
@@ -2710,7 +2708,5 @@ $('.awdcarausel .owl-carousel').owlCarousel({
          })
 
       </script>
-
-
 
 </body></html><!-- ==== End Desktop Footer ==== -->

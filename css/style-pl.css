@@ -1,10 +1,10 @@
 body {
-    color: #2961AD
+    color: #142450
 }
 
 .emitab .tab-content {
     padding: 15px;
-    border: 1px solid #2961AD;
+    border: 1px solid #142450;
     margin-bottom: 26px;
 }
 
@@ -46,7 +46,7 @@ body {
     transform: translateX(-50%);
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-top: 8px solid #2961AD;
+    border-top: 8px solid #142450;
     content: '';
     z-index: 1
 }
@@ -72,12 +72,12 @@ a.nav-link.applynow:active,
 a.nav-link.applynow:focus,
 a.nav-link.applynow:hover,
 a.nav-link.applynow:visited {
-    background: #2961AD !important
+    background: #142450 !important
 }
 
 a.nav-link.applynow.active.show {
-    background: #2961AD !important;
-    border: 1px solid #2961AD !important
+    background: #142450 !important;
+    border: 1px solid #142450 !important
 }
 
 .applynow.active::after {
@@ -105,8 +105,8 @@ input[type=range] {
     -moz-apperance: none;
     border-radius: 6px;
     height: 2px;
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #2961AD), color-stop(0, #e6b120));
-    background-image: -moz-linear-gradient(left center, #2961AD 0, #2961AD 0, #e6b120 0, #e6b120 100%)
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #142450), color-stop(0, #e6b120));
+    background-image: -moz-linear-gradient(left center, #142450 0, #142450 0, #e6b120 0, #e6b120 100%)
 }
 
 input[type=range]::-moz-range-track {
@@ -122,7 +122,7 @@ input[type=range]:focus {
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none !important;
-    background-color: #2961AD;
+    background-color: #142450;
     height: 13px;
     width: 13px;
     border-radius: 50%
@@ -130,7 +130,7 @@ input[type=range]::-webkit-slider-thumb {
 
 input[type=range]::-moz-range-thumb {
     -moz-appearance: none !important;
-    background-color: #2961AD;
+    background-color: #142450;
     border: none;
     height: 13px;
     width: 13px;
@@ -154,13 +154,13 @@ input[type=range]::-moz-range-thumb {
 }
 
 .tab-inner-content {
-    color: #2961AD;
+    color: #142450;
     padding-top: 10px
 }
 
 .tab-inner-content .tab-title {
     font-size: 20px;
-    color: #2961AD;
+    color: #142450;
     font-weight: 700
 }
 
@@ -170,7 +170,7 @@ input[type=range]::-moz-range-thumb {
     font-weight: 700;
     margin-bottom: 25px;
     margin-top: 0 !important;
-    color: #2961AD
+    color: #142450
 }
 
 .wd30 {
@@ -179,7 +179,7 @@ input[type=range]::-moz-range-thumb {
 
 .tab-inner-content p {
     margin-bottom: 20px;
-    color: #2961AD
+    color: #142450
 }
 
 .tab-inner-content p a {
@@ -245,7 +245,7 @@ input[type=range]::-moz-range-thumb {
 .tab-inner-content .th {
     border-right: 1px solid #fff;
     color: #fff;
-    background: #253a71;
+    background: #142450;
     font-weight: 700
 }
 
@@ -257,7 +257,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 .tab-content .table-border tbody tr {
-    border-bottom: 1px solid #2961AD;
+    border-bottom: 1px solid #142450;
     background-color: #fff
 }
 
@@ -329,19 +329,19 @@ input[type=range]::-moz-range-thumb {
 
     .emitab-mobile .tab-content h5 a {
         font-size: 15px;
-        background: #2961AD;
+        background: #142450;
         display: block
     }
 
     .emitab-mobile .card .card-header {
         border-bottom: 1px solid #fff;
-        background: #2961AD;
+        background: #142450;
         border-radius: 0
     }
 
     .emitab-mobile .card .card-header h5 {
         position: relative;
-        background: #2961AD;
+        background: #142450;
         font-size: 14px;
         color: #fff;
     }
@@ -368,11 +368,11 @@ input[type=range]::-moz-range-thumb {
 
     .emitab-mobile .card-header.collapsed:after,
     .emitab-mobile .card-header:after {
-        color: #2961AD
+        color: #142450
     }
 
     .emitab-mobile .collapse.show {
-        border-bottom: 1px solid #2961AD
+        border-bottom: 1px solid #142450
     }
 
     .tab-inner-content .tab-title {
@@ -459,10 +459,10 @@ input[type=range]::-moz-range-thumb {
     .faqbox-new .emitab .nav-tabs .nav-link {
         text-align: left;
         border: none !important;
-        border-bottom: 1px solid #2961AD !important;
+        border-bottom: 1px solid #142450 !important;
         padding: 14px 18px 14px 15px;
         position: relative;
-        color: #2961AD;
+        color: #142450;
         font-weight: 400;
         border-radius: 0 !important;
         font-size: 14px
@@ -473,10 +473,10 @@ input[type=range]::-moz-range-thumb {
     .faqbox-new .emitab .nav-tabs .nav-link:hover,
     .faqbox-new .emitab .nav-tabs .nav-link:visited {
         background: 0 0;
-        color: #2961AD;
+        color: #142450;
         font-weight: 700;
         border: none !important;
-        border-bottom: 1px solid #2961AD !important
+        border-bottom: 1px solid #142450 !important
     }
 
     .faqbox-new .emitab .nav-tabs .nav-link:before {
@@ -487,7 +487,7 @@ input[type=range]::-moz-range-thumb {
         left: 0;
         top: 20px;
         position: absolute;
-        background: #2961AD
+        background: #142450
     }
 
     .faqbox-new .emitab .nav-tabs .nav-link.active:after {
@@ -495,8 +495,8 @@ input[type=range]::-moz-range-thumb {
         width: 10px;
         height: 10px;
         border: none;
-        border-left: 3px solid #2961AD;
-        border-bottom: 3px solid #2961AD;
+        border-left: 3px solid #142450;
+        border-bottom: 3px solid #142450;
         right: 5px !important;
         bottom: unset;
         top: 50%;
@@ -544,7 +544,7 @@ input[type=range]::-moz-range-thumb {
 .semi-heading h3 {
     margin-bottom: 0.5rem !important;
     font-size: 18px !important;
-    color: #2961AD;
+    color: #142450;
     margin-top: 20px !important;
 }
 
@@ -555,11 +555,11 @@ input[type=range]::-moz-range-thumb {
 .semi-heading-wp h3 {
     margin-bottom: 0.5rem !important;
     font-size: 17px !important;
-    color: #2961AD;
+    color: #142450;
 }
 
 .border-right {
-    border-right: dashed 2px #2961AD !important;
+    border-right: dashed 2px #142450 !important;
 }
 
 .accordion-header {

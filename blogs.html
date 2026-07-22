@@ -1,8 +1,5 @@
 <!DOCTYPE html><html lang="en"><head>
-<script src="js/jquery-3.6.0.min.js"></script>
-
-
-
+<script src="/js/jquery-3.6.0.min.js"></script>
 
       <!-- Metas -->
 
@@ -26,7 +23,7 @@
 
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-      <link rel="apple-touch-icon" type="image/png" href="img/favicon.ico">
+      <link rel="apple-touch-icon" type="image/png" href="/img/favicon.ico">
 
       <meta name="keywords" content="personal loan, personal loan eligibility, documents required for personal loan, ">
 
@@ -44,76 +41,71 @@
 
       <!-- Favicon -->
 
-      <link rel="shortcut icon" href="img/favicon.ico">
+      <link rel="shortcut icon" href="/img/favicon.ico">
 
       <!-- Plugins -->
 
-      <link rel="stylesheet" href="css/plugins.css">
+      <link rel="stylesheet" href="/css/plugins.css">
 
       <!-- Core Style Css -->
 
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="/css/style.css">
 
-      <link rel="stylesheet" href="css/style-new.css">
+      <link rel="stylesheet" href="/css/style-new.css">
 
-      <link rel="stylesheet" href="css/style-pl.css">
+      <link rel="stylesheet" href="/css/style-pl.css">
 
-      <link rel="stylesheet" href="css/new-acco.css">
+      <link rel="stylesheet" href="/css/new-acco.css">
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script id="tailwind-config">try{
-  tailwind.config = {
-    corePlugins: { preflight: false },
-    theme: {
-      extend: {
-        colors: {
-          primary: '#142450',
-          secondary: '#b61722',
-          surface: '#f8f9ff',
-          'on-surface': '#0b1c30',
-          'on-surface-variant': '#45464f',
-          'primary-container': '#2b3a67',
-          'on-primary-container': '#96a5d9',
-          'outline-variant': '#c5c6d0'
-        },
-        fontFamily: {
-          'display-md': ['Inter'],
-          'label-md': ['Inter'],
-          'body-md': ['Inter'],
-          'headline-sm': ['Inter']
-        },
-        spacing: {
-          'margin-mobile': '16px',
-          'margin-desktop': '48px',
-          'gutter': '24px'
-        }
+<link rel="stylesheet" href="/css/tailwind-built.css">
+
+  <link rel="stylesheet" href="/css/loan-page-common.css">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/tailwind-built.css">
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var menuBtn = document.getElementById('mobile-menu-btn');
+  var menuPanel = document.getElementById('mobile-menu-panel');
+  var menuIcon = document.getElementById('mobile-menu-icon');
+  if (menuBtn && menuPanel) {
+    menuBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = !menuPanel.classList.contains('hidden');
+      menuPanel.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+      if (menuIcon) menuIcon.textContent = isOpen ? 'close' : 'menu';
+    });
+    document.addEventListener('click', function(e) {
+      if (!menuPanel.classList.contains('hidden') && !menuBtn.contains(e.target) && !menuPanel.contains(e.target)) {
+        menuPanel.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        if (menuIcon) menuIcon.textContent = 'menu';
       }
-    }
+    });
   }
-}catch(_e){}</script>
-  <link rel="stylesheet" href="css/loan-page-common.css">
+});
+</script>
+
 </head>
 
-   <body style="padding-top: 108px;">
+   <body class="bg-background text-on-background font-body-md pt-[64px] lg:pt-[116px]">
 <!-- START HEADER -->
 <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 shadow-md">
   <!-- Top Tier: Brand & Utilities (White Background) -->
   <div class="bg-white">
     <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop h-16 flex items-center justify-between">
       <!-- Logo -->
-      <a href="index.html" class="flex items-center gap-3 group">
-        <img src="logo-mark.png" alt="Credify Capital Logo" class="w-12 h-12 md:w-16 md:h-16 object-contain">
-        <span class="font-display-md text-display-md text-primary font-bold tracking-tight transition-colors group-hover:text-secondary">
-          Credify <span class="text-secondary group-hover:text-primary">Capital</span>
-        </span>
-      </a>
-
-      <!-- Desktop Utility Links -->
+      <a href="index.html" class="flex items-center group py-1.5">
+        <img src="/img/credify-full-logo.png" alt="Credify Capital Logo" class="h-14 md:h-18 lg:h-22 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-xs" />
+      </a><!-- Desktop Utility Links -->
       <div class="hidden lg:flex items-center gap-6 font-label-md text-label-md text-on-surface-variant">
         <a href="about.html" class="hover:text-primary transition-colors">About Us</a>
         <a href="partner-login.html" class="hover:text-primary transition-colors">Partner Login</a>
+        <a href="track-application.html" class="hover:text-primary transition-colors font-semibold text-secondary">Track Status</a>
         <a href="blogs.html" class="hover:text-primary transition-colors">Blogs</a>
         <a href="contact-us.html" class="hover:text-primary transition-colors">Contact Us</a>
         <a href="apply.html" class="bg-secondary text-white px-6 py-2 rounded-full font-bold hover:brightness-110 shadow-sm transition-all ml-2">
@@ -122,10 +114,26 @@
       </div>
       
       <!-- Mobile Menu Toggle -->
-      <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center p-2 text-primary hover:text-secondary transition-colors">
-        <span class="material-symbols-outlined text-[28px]">menu</span>
+      <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center p-2 text-primary hover:text-secondary transition-colors" aria-expanded="false" aria-controls="mobile-menu-panel">
+        <span id="mobile-menu-icon" class="material-symbols-outlined text-[28px]">menu</span>
       </button>
     </div>
+  </div>
+
+  <!-- Mobile Menu Panel -->
+  <div id="mobile-menu-panel" class="hidden lg:hidden bg-white border-t border-outline-variant shadow-xl">
+    <nav class="flex flex-col divide-y divide-outline-variant">
+      <a href="personal-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Personal Loan</a>
+      <a href="business-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Business Loan</a>
+      <a href="professional-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Professional Loan</a>
+      <a href="medical-equipment-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Medical Equipment Loan</a>
+      <a href="car-loan.html" class="px-margin-mobile py-3 font-semibold text-primary">Car Loan</a>
+      <a href="loan-against-property.html" class="px-margin-mobile py-3 font-semibold text-primary">Loan Against Property</a>
+      <a href="about.html" class="px-margin-mobile py-3 text-on-surface-variant">About Us</a>
+      <a href="track-application.html" class="px-margin-mobile py-3 font-semibold text-secondary">Track Status</a>
+      <a href="contact-us.html" class="px-margin-mobile py-3 text-on-surface-variant">Contact Us</a>
+      <a href="apply.html" class="mx-margin-mobile my-3 bg-secondary text-white text-center py-2.5 rounded-lg font-bold">Apply Now</a>
+    </nav>
   </div>
 
   <!-- Bottom Tier: Main Navigation (Blue Background) -->
@@ -143,9 +151,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="personal-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Personal Loan Overview</a>
-                 <a href="personal-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="personal-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="personal-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="personal-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="personal-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="personal-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="personal-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Personal+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -184,9 +192,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="business-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Business Loan Overview</a>
-                 <a href="business-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="business-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="business-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="business-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="business-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="business-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="business-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Business+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -214,9 +222,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="professional-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Professional Loan Overview</a>
-                 <a href="professional-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="professional-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="professional-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="professional-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="professional-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="professional-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="professional-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Professional+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -240,9 +248,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="working-capital.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Working Capital Overview</a>
-                 <a href="working-capital-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="working-capital-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="working-capital-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="working-capital-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="working-capital-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="working-capital-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="working-capital-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Working+Capital" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -259,9 +267,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="machinery-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Machinery Loan Overview</a>
-                 <a href="machinery-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="machinery-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="machinery-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="machinery-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="machinery-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="machinery-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="machinery-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Machinery+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -278,9 +286,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="medical-equipment-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Medical Equipment Overview</a>
-                 <a href="medical-equipment-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="medical-equipment-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="medical-equipment-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="medical-equipment-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="medical-equipment-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="medical-equipment-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="medical-equipment-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Medical+Equipment" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -297,9 +305,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="car-loan.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Car Loan Overview</a>
-                 <a href="car-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="car-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="car-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="car-loan-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="car-loan-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="car-loan-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="car-loan-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Car+Loan" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -316,9 +324,9 @@
              <!-- Column 1 -->
              <div class="flex flex-col gap-3 min-w-[220px]">
                  <a href="loan-against-property.html" class="font-semibold text-primary hover:text-secondary transition-colors py-1">Loan Against Property Overview</a>
-                 <a href="loan-against-property-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features &amp; Benefits</a>
-                 <a href="loan-against-property-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility &amp; Documents</a>
-                 <a href="loan-against-property-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates &amp; Charges</a>
+                 <a href="loan-against-property-features-and-benefits.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Features & Benefits</a>
+                 <a href="loan-against-property-eligibility-and-documents.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Eligibility & Documents</a>
+                 <a href="loan-against-property-interest-rates-and-charges.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">Interest Rates & Charges</a>
                  <a href="calculator.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">EMI Calculator</a>
                  <a href="loan-against-property-faq.html" class="hover:text-secondary transition-colors py-1 text-on-surface-variant">FAQs</a>
                  <a href="apply.html?type=Loan+Against+Property" class="mt-4 bg-primary text-white text-center py-2.5 rounded-lg hover:bg-opacity-90 font-bold shadow-md transition-all">Apply Now</a>
@@ -336,7 +344,7 @@
   </div>
 </header>
 <!-- END HEADER -->
-  <body class="bg-background text-on-background font-body-md pt-28">
+
     <section class="section-padding pt-32 pb-16 bg-surface">
       <div class="container mx-auto max-w-7xl px-4 md:px-6">
         <div class="text-center space-y-4 mb-12">
@@ -348,7 +356,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Blog Card 1 -->
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-all">
-                <img src="img/blog/how-to-use-personal-loan-for-financial-investment.jpg" alt="How to Use Personal Loans for Financial Investments?" class="h-48 w-full object-cover">
+                <img src="/img/blog/how-to-use-personal-loan-for-financial-investment.jpg" alt="How to Use Personal Loans for Financial Investments?" class="h-48 w-full object-cover">
                 <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
                     <div class="space-y-2">
                         <span class="text-xs font-semibold bg-blue-50 text-secondary px-2.5 py-1 rounded-full">Investment</span>
@@ -364,7 +372,7 @@
             
             <!-- Blog Card 2 -->
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-all">
-                <img src="img/blog/how-to-get-a-personal-loan-in-five-easy-steps.jpg" alt="How to Get A Personal Loan in 5 Easy Steps?" class="h-48 w-full object-cover">
+                <img src="/img/blog/how-to-get-a-personal-loan-in-five-easy-steps.jpg" alt="How to Get A Personal Loan in 5 Easy Steps?" class="h-48 w-full object-cover">
                 <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
                     <div class="space-y-2">
                         <span class="text-xs font-semibold bg-blue-50 text-secondary px-2.5 py-1 rounded-full">Loan Guide</span>
@@ -380,7 +388,7 @@
 
             <!-- Blog Card 3 -->
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-all">
-                <img src="img/blog/all-about-personal-loan-disbursement-process.jpg" alt="All You Need to Know about Personal Loan Disbursal Process" class="h-48 w-full object-cover">
+                <img src="/img/blog/all-about-personal-loan-disbursement-process.jpg" alt="All You Need to Know about Personal Loan Disbursal Process" class="h-48 w-full object-cover">
                 <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
                     <div class="space-y-2">
                         <span class="text-xs font-semibold bg-blue-50 text-secondary px-2.5 py-1 rounded-full">Disbursal</span>
@@ -396,7 +404,7 @@
 
             <!-- Blog Card 4 -->
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-all">
-                <img src="img/blog/top-advantages-of-applying-online-for-personal-loan.jpg" alt="Top 5 Advantages of Applying Online for a Personal Loan" class="h-48 w-full object-cover">
+                <img src="/img/blog/top-advantages-of-applying-online-for-personal-loan.jpg" alt="Top 5 Advantages of Applying Online for a Personal Loan" class="h-48 w-full object-cover">
                 <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
                     <div class="space-y-2">
                         <span class="text-xs font-semibold bg-blue-50 text-secondary px-2.5 py-1 rounded-full">Digital Lending</span>
@@ -412,7 +420,7 @@
 
             <!-- Blog Card 5 -->
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-all">
-                <img src="img/blog/top-benefits-of-using-personal-loan-emi-calculator.jpg" alt="Top Benefits of Using a Personal Loan EMI Calculator" class="h-48 w-full object-cover">
+                <img src="/img/blog/top-benefits-of-using-personal-loan-emi-calculator.jpg" alt="Top Benefits of Using a Personal Loan EMI Calculator" class="h-48 w-full object-cover">
                 <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
                     <div class="space-y-2">
                         <span class="text-xs font-semibold bg-blue-50 text-secondary px-2.5 py-1 rounded-full">Planning</span>
@@ -428,7 +436,7 @@
 
             <!-- Blog Card 6 -->
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-all">
-                <img src="img/blog/what-happens-if-you-miss-to-pay-personal-loan-emi.jpg" alt="What Will Happen When You Miss Your Personal Loan EMI?" class="h-48 w-full object-cover">
+                <img src="/img/blog/what-happens-if-you-miss-to-pay-personal-loan-emi.jpg" alt="What Will Happen When You Miss Your Personal Loan EMI?" class="h-48 w-full object-cover">
                 <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
                     <div class="space-y-2">
                         <span class="text-xs font-semibold bg-blue-50 text-secondary px-2.5 py-1 rounded-full">Credit Health</span>
@@ -444,7 +452,7 @@
 
             <!-- Blog Card 7 -->
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-all">
-                <img src="img/blog/where-can-i-get-personal-loan-online.jpg" alt="Where Can I Get a Personal Loan Online in India?" class="h-48 w-full object-cover">
+                <img src="/img/blog/where-can-i-get-personal-loan-online.jpg" alt="Where Can I Get a Personal Loan Online in India?" class="h-48 w-full object-cover">
                 <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
                     <div class="space-y-2">
                         <span class="text-xs font-semibold bg-blue-50 text-secondary px-2.5 py-1 rounded-full">Lending Portal</span>
@@ -465,8 +473,9 @@
 <footer class="bg-primary text-white border-t border-outline-variant/20 pt-12 pb-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         <div class="space-y-4">
-            <p class="text-lg font-bold">Credify<span class="text-secondary">Capital</span></p>
-            <p class="text-xs text-white/80 leading-relaxed">Smart Solutions. Fastest Approvals.</p>
+            <a href="index.html" class="inline-block group mb-4">
+        <img src="/img/credify-clean-logo.png" alt="Credify Capital Logo" class="h-14 md:h-20 w-auto object-contain bg-white px-3.5 py-2.5 rounded-2xl transition-transform duration-300 group-hover:scale-105 shadow-md" />
+      </a><p class="text-xs text-white/80 leading-relaxed">Smart Solutions. Fastest Approvals.</p>
         </div>
         <div>
             <p class="text-xs font-bold uppercase tracking-wider text-secondary mb-3">Our Frameworks</p>
@@ -499,39 +508,34 @@
     </div>
 </footer>
 <!-- END FOOTER -->
-<script defer="" src="js/jquery.validate.js"></script>
-<script defer="" src="js/additional-methods.js"></script>
-
-
-      
+<script defer="" src="/js/jquery.validate.js"></script>
+<script defer="" src="/js/additional-methods.js"></script>
 
       <script></script>
 
       <!-- jQuery -->
 
-      
-
       <!-- bootstrap -->
 
-      <script src="js/bootstrap.min.js"></script>
+      <script src="/js/bootstrap.min.js"></script>
 
       <!-- scrollIt -->
 
-      <script src="js/scrollIt.min.js"></script>
+      <script src="/js/scrollIt.min.js"></script>
 
       <!-- owl carousel -->
 
-      <script src="js/owl.carousel.min.js"></script>
+      <script src="/js/owl.carousel.min.js"></script>
 
       <!-- isotope.pkgd.min js -->
 
       <!-- custom scripts -->
 
-      <script src="js/scripts.js"></script>
+      <script src="/js/scripts.js"></script>
 
       <!-- emi scripts -->
 
-      <script type="text/javascript" src="js/new-acco.js"></script>
+      <script type="text/javascript" src="/js/new-acco.js"></script>
 
       <!-- owl scripts -->
 
@@ -624,7 +628,5 @@
          })
 
       </script>
-
-
 
 </body></html><!-- ==== End Desktop Footer ==== -->

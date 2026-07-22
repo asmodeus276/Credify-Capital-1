@@ -7,12 +7,12 @@
     left: 0;
     right: 0;
     width: 100%;
-    border-bottom: 1px solid #223a72;
+    border-bottom: 1px solid #142450;
     top: 40px;
 }
 .new-acco .nav-tabs.tab-scroll-fixed {
-    border-bottom: 1px solid #223a72;
-    border-top: 1px solid #223a72;
+    border-bottom: 1px solid #142450;
+    border-top: 1px solid #142450;
 }
 .new-acco .nav-tabs.tab-scroll-fixed:after,
 .tab-inner-content .nav-tabs:after {
@@ -31,7 +31,7 @@
 }
 .divborder,
 .new-acco .acco-item {
-    border: 1px solid #223a72;
+    border: 1px solid #142450;
     border-radius: 10px;
     margin-bottom: 25px;
     padding: 0 25px;
@@ -41,7 +41,7 @@
 }
 .divborder hr,
 .topbordr {
-    border-top: 1px solid #223a72;
+    border-top: 1px solid #142450;
 }
 .divborder hr {
     margin: 10px 0 25px;
@@ -50,7 +50,7 @@
     padding-top: 5px;
 }
 .vl {
-    border-left: 1px solid #223a72;
+    border-left: 1px solid #142450;
     height: 25px;
     display: inline;
     margin: 0 10px;
@@ -61,13 +61,13 @@
 .firstrevw p {
     font-size: 15px;
     font-weight: 500;
-    color: #223a72;
+    color: #142450;
 }
 .secondrevw p {
     color: #000;
 }
 .checked {
-    color: #223a72;
+    color: #142450;
 }
 .fa-star:before {
     content: "";
@@ -98,7 +98,7 @@
 }
 .new-acco .acco-item .acco-link:after {
     content: "";
-    border-color: transparent #223a72;
+    border-color: transparent #142450;
     border-style: solid;
     border-width: 0.35em 0 0.35em 0.45em;
     display: block;
@@ -122,12 +122,12 @@
     margin: 0 !important;
 }
 .golden-border {
-    border: 1px solid #223a72;
+    border: 1px solid #142450;
     padding: 25px;
 }
 .sec-head {
     font-size: 20px;
-    color: #223a72;
+    color: #142450;
     font-weight: 700;
     margin-top: 10px;
 }
@@ -146,7 +146,7 @@
     position: absolute;
 }
 .card-review {
-    border-top: 3px solid #223a72;
+    border-top: 3px solid #142450;
     padding-top: 32px;
 }
 .pl-new .acco-item h2 {font-size: 18px!important;}
@@ -185,10 +185,10 @@
     }
     .divborder hr,
     .mblborder {
-        border-top: 1px solid #223a72;
+        border-top: 1px solid #142450;
     }
     .mblborder {
-        border-bottom: 1px solid #223a72;
+        border-bottom: 1px solid #142450;
         margin-bottom: 10px;
     }
     .fa-star:before,
@@ -326,7 +326,7 @@
 }
 
 /* overview page review section css start here*/
-.pf-review{position:relative;border:1px solid #223a72;border-radius:20px;padding:25px}
+.pf-review{position:relative;border:1px solid #142450;border-radius:20px;padding:25px}
 .reviewcarausel .mbltextcenter,.reviewcarauselmob .mbltextcenter{margin:auto}
 .reviewcarausel .mbltextcenter img,.reviewcarauselmob .mbltextcenter img{border:5px solid #fff;border-radius:50%;}
 .review-detail{margin-left:20px}
@@ -336,11 +336,11 @@
 .review-name{font-size: 20px;font-weight: 700;margin-bottom: 0;margin-right: 10px;}
 .reviewcarausel .secondrevw p,.reviewcarauselmob .secondrevw p{text-align:left;margin:8px 0 0}
 .review-container{position:relative}
-.pf-review::before{content:"";width:100px;height:100%;position:absolute;left:0;top:0;background-color:#223a72;border-top-left-radius:20px;border-bottom-left-radius:20px}
+.pf-review::before{content:"";width:100px;height:100%;position:absolute;left:0;top:0;background-color:#142450;border-top-left-radius:20px;border-bottom-left-radius:20px}
 .reviewcarausel .owl-theme .owl-nav .owl-next,.reviewcarauselmob .owl-theme .owl-nav .owl-next{right:-25px;padding:8px 4px}
 .reviewcarausel .owl-theme .owl-nav .owl-prev,.reviewcarauselmob .owl-theme .owl-nav .owl-prev{left:-25px;padding:8px 5px}
 .reviewcarauselmob{display:none;}
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {background: #223a72!important;}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {background: #142450!important;}
 .owl-theme .owl-nav {margin-top: 0px; position: absolute; top: 38%;}
 
 /*white banner text*/
@@ -372,13 +372,13 @@
 /* PL calculator page tabs */
 .amortization-slider{position: relative;padding: 0 20px;margin-bottom: 35px;}
 .amortization-slider .nav-tabs {border: none;}
-.amortization-slider .tab-item .active, .amortization-slider .tab-item a.tab-link:hover{font-weight: 700;border-bottom: 2px solid #233972;}
+.amortization-slider .tab-item .active, .amortization-slider .tab-item a.tab-link:hover{font-weight: 700;border-bottom: 2px solid #142450;}
 .amortization-slider .tab-item a:before {display: block;content: attr(title);font-weight: 700;height: 0;overflow: hidden;visibility: hidden;}
 .amortization-slider .item {position: relative;text-align: center;padding: 0 10px;}
-.amortization-slider .item:after{content: "";width: 2px;height: 70%;background-color: #223a72;position: absolute;right: -1px;top: 3px;}
+.amortization-slider .item:after{content: "";width: 2px;height: 70%;background-color: #142450;position: absolute;right: -1px;top: 3px;}
 .amortization-slider .owl-item:last-child .item:after{display: none}
 .mb-20 {margin-bottom: 20px!important;}
-.amortization-slider .owl-theme .owl-nav .owl-prev,.amortization-slider .owl-theme .owl-nav .owl-next{background-color: transparent;color:#223a72;padding: 0;}
+.amortization-slider .owl-theme .owl-nav .owl-prev,.amortization-slider .owl-theme .owl-nav .owl-next{background-color: transparent;color:#142450;padding: 0;}
 .amortization-slider .owl-theme .owl-nav .owl-prev{left: -18px;}
 .amortization-slider .owl-theme .owl-nav .owl-next{right: -18px;}
 .amortization-slider i.fa.fa-chevron-left, .amortization-slider i.fa.fa-chevron-right{font-size: 18px;line-height: 18px;}

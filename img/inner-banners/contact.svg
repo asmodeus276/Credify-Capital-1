@@ -11,9 +11,9 @@
   <circle cx="1750" cy="50" r="150" fill="white" fill-opacity="0.03"/>
   <circle cx="100" cy="350" r="180" fill="white" fill-opacity="0.03"/>
   <!-- Title text -->
-  <text x="120" y="180" font-family="Arial, sans-serif" font-size="48" font-weight="700" fill="white">Contact Us</text>
+  
   <!-- Subtitle text -->
-  <text x="120" y="240" font-family="Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.85)">We're here to help</text>
+  
   <!-- Accent bar -->
   <rect x="120" y="270" width="80" height="4" fill="#e90000" rx="2"/>
 </svg>
